@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/smart-engine.php';
 $entries = vm_visa_type_hub_data('student');
-vm_page_start('Student Visa Guide — 25 Countries', 'Student visa requirements, fees, documents and official sources for Ethiopian applicants.');
+vm_page_start('Student Visa for Ethiopians — 25 Countries, Fees & Requirements 2026', 'Student visa requirements for Ethiopian passport holders. Admission letters, funding proof, CAS, I-20, official application portals and fees for 25 countries.');
 ?>
 <section class="page-hero visa-hub-hero">
   <span class="eyebrow">Visa type guide</span>

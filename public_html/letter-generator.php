@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $draft = ['template' => vm_input('template'), 'name' => vm_input('name'), 'country' => vm_input('country'), 'purpose' => vm_input('purpose', 800), 'dates' => vm_input('dates'), 'funding' => vm_input('funding'), 'ties' => vm_input('ties', 500), 'variant_seed' => random_int(1000, 999999)];
     $draft['submission_id'] = vm_save_submission('letter-request', $draft);
 }
-vm_page_start('Letter Generator');
+vm_page_start('Free Visa Letter Generator for Ethiopians', 'Generate free visa letter drafts for Ethiopian applicants. Cover letters, sponsor letters, invitation letters and employer letters.');
 ?>
 <section class="page-hero"><span class="eyebrow">Offline smart draft engine</span><h1>Generate a letter draft that does not sound copied.</h1><p>VisaMenged rotates safe wording, adapts to your answers and gives rewrite points so your final letter stays personal to your evidence.</p></section>
 <section class="two-col">

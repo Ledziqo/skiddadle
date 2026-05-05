@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/smart-engine.php';
 $entries = vm_visa_type_hub_data('tourist');
-vm_page_start('Tourist Visa Guide — 25 Countries', 'Tourist and visitor visa requirements, fees, documents and official sources for Ethiopian applicants.');
+vm_page_start('Tourist Visa for Ethiopians — 25 Countries, Fees & Requirements 2026', 'Tourist and visitor visa requirements for Ethiopian passport holders. Travel itineraries, accommodation proof, funding evidence, official application portals and fees for 25 countries.');
 ?>
 <section class="page-hero visa-hub-hero">
   <span class="eyebrow">Visa type guide</span>

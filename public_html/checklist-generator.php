@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $payload['submission_id'] = vm_save_submission('checklist', $payload);
     $result = $payload;
 }
-vm_page_start('Checklist Generator');
+vm_page_start('Free Visa Checklist Generator for Ethiopians', 'Generate a free visa checklist for Ethiopian applicants. Documents, forms, fees and requirements organized by country and visa type.');
 ?>
 <section class="page-hero generator-hero"><span class="eyebrow">Smarter no-login generator</span><h1>Build a visa checklist that reacts to your file.</h1><p>Answer a few questions and VisaMenged will organize official resources, evidence groups, timing warnings, refusal risks and support templates around your situation.</p></section>
 <section class="two-col">

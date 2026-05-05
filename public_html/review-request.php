@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $saved = vm_save_submission('review-request', $payload);
     }
 }
-vm_page_start('Document Review Request');
+vm_page_start('Visa Document Review for Ethiopians — File Check', 'Submit your visa file for professional review. Missing documents, weak points, refusal risks and fix recommendations for Ethiopian applicants.');
 ?>
 <section class="page-hero pricing-hero"><span class="eyebrow">Smart file pre-check</span><h1>Let VisaMenged find the weak points before you submit.</h1><p>Answer a few risk questions and upload copies for review. The smart pre-check flags likely gaps instantly, then we can do a deeper human audit of the actual documents.</p><div class="hero-actions"><a class="button" href="#review-form">Start smart pre-check</a><a class="button secondary" href="<?= vm_url('pack.php?id=quick-file-audit') ?>">See quick audit</a></div></section>
 <section class="review-value">

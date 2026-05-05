@@ -4,7 +4,7 @@ require_once __DIR__ . '/includes/smart-engine.php';
 $saved = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') { vm_verify_csrf(); $saved = vm_save_submission('contact', ['name'=>vm_input('name'), 'contact'=>vm_input('contact'), 'topic'=>vm_input('topic'), 'message'=>vm_input('message', 1500)]); }
 $topic = (string)($_GET['topic'] ?? '');
-vm_page_start('Contact');
+vm_page_start('Contact VisaMenged — Ethiopian Visa Support', 'Contact VisaMenged for visa guidance, document review, letter writing and checklist support for Ethiopian applicants.');
 ?>
 <section class="page-hero"><span class="eyebrow">Contact Brain</span><h1>Tell us the visa problem. We route it to the right help.</h1><p>Choose the closest issue, then send your message. For faster help, include destination country, visa type, deadline and what feels weak.</p></section>
 <section class="contact-strip">

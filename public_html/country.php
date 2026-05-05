@@ -41,7 +41,7 @@ $ethiopiaNotes = [
 ];
 $countryNotes = $ethiopiaNotes[$slug] ?? ['Check whether your route is portal-first, PDF-based, appointment-based, or visa-center based before preparing documents.', 'For Ethiopian applicants, funding clarity, invitation consistency and return ties are often the areas that need the most organization.'];
 $fallbackVisaRows = vm_public_visa_type_rows($slug, (string)($country['hub'] ?? ''));
-vm_page_start(($country['name'] ?? 'Country') . ' Visa Guide');
+vm_page_start(($country['name'] ?? 'Country') . ' Visa for Ethiopians — Fees, Forms & Requirements 2026', 'Complete ' . ($country['name'] ?? 'country') . ' visa guide for Ethiopian applicants. Official fees, required documents, processing time, common refusal reasons & application steps.');
 ?>
 <section class="page-hero">
   <span class="eyebrow"><?= vm_h($country['region'] ?? 'Country guide') ?></span>

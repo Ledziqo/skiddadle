@@ -4,7 +4,7 @@ require_once __DIR__ . '/includes/smart-engine.php';
 $schengen = ['germany','france','italy','netherlands','sweden','austria','belgium','schengen'];
 $resources = array_values(array_filter(vm_resources(), fn($r) => in_array((string)($r['slug'] ?? ''), $schengen, true)));
 $schengenSteps = vm_country_process_steps('germany', $resources);
-vm_page_start('Schengen Hub');
+vm_page_start('Schengen Visa for Ethiopians — Germany, France, Italy & More', 'Schengen visa guide for Ethiopian applicants. Germany, France, Italy, Netherlands, Sweden, Austria, Belgium. Official forms, fees and requirements.');
 ?>
 <section class="page-hero warning-hero">
   <span class="eyebrow">Schengen applications from Ethiopia</span>

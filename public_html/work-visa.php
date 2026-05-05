@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/smart-engine.php';
 $entries = vm_visa_type_hub_data('work');
-vm_page_start('Work Visa Guide - 25 Countries', 'Work visa requirements, employer documents, permits and official sources for Ethiopian applicants.');
+vm_page_start('Work Visa for Ethiopians — 25 Countries, Fees & Requirements 2026', 'Work visa requirements for Ethiopian passport holders. Employer sponsorship, work permits, contracts, qualification proof, official application portals and fees for 25 countries.');
 ?>
 <section class="page-hero visa-hub-hero">
   <span class="eyebrow">Visa type guide</span>

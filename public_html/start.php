@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $payload['assistant_result'] = ['score' => $result['score'], 'label' => $result['label']];
     $payload['submission_id'] = vm_save_submission('start-assistant', $payload);
 }
-vm_page_start('Start Assistant', 'Guided visa assistant for Ethiopian applicants.');
+vm_page_start('Free Visa Start Assistant for Ethiopians', 'Not sure where to start? Answer a few questions and get a personalized visa checklist and next steps for Ethiopian applicants.');
 ?>
 <section class="page-hero assistant-hero">
   <span class="eyebrow">VisaMenged Start Assistant</span>

@@ -2,7 +2,7 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/smart-engine.php';
 $packs = vm_packs();
-vm_page_start('Services');
+vm_page_start('VisaMenged Services — Document Review & Letter Writing', 'Paid visa services for Ethiopian applicants. Document review, letter writing, checklist support and file organization from 999 birr.');
 ?>
 <section class="page-hero pricing-hero">
   <span class="eyebrow">Paid help</span>

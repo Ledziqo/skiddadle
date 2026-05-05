@@ -25,7 +25,7 @@ foreach ($countries as $c) {
     $countrySlugMap[(string)($c['name'] ?? '')] = (string)($c['slug'] ?? '');
 }
 
-vm_page_start('Official Forms Library', 'Search official visa forms, portals and requirement pages for Ethiopian applicants.');
+vm_page_start('Official Visa Forms for Ethiopians — PDFs, Portals & Checklists', 'Find official visa forms, online portals and requirement pages for Ethiopian applicants. Organized by country and visa type. Student, business, tourist & medical visa forms.');
 ?>
 <section class="page-hero">
   <span class="eyebrow">Forms Brain</span>

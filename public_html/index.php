@@ -8,7 +8,7 @@ $paid = [
   ['Fix my letters', 'from 1,500 birr', 'Cover, sponsor, invitation, employer or refusal letters.', 'letter-generator.php'],
   ['Organize everything', 'from 3,000 birr', 'Full file order, consistency check and final fix list.', 'review-request.php'],
 ];
-vm_page_start('Home', 'VisaMenged country guides, official visa resources, and paid document support for Ethiopian applicants.');
+vm_page_start('Ethiopian Visa Guide 2026 — Free Country Guides, Official Forms & Document Support', 'Free visa guides for Ethiopian passport holders. Official forms, fees, requirements for UK, USA, Canada, Schengen, China & 20+ countries. Checklist generator + document review.');
 ?>
 <section class="simple-home-hero">
   <div>

@@ -541,4 +541,65 @@ function vm_page_start(string $title, string $description = ''): void
 }
 
 function vm_page_end(): void { require __DIR__ . '/footer.php'; }
+
+function vm_canonical_url(): string
+{
+    $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+    $host = (string)($_SERVER['HTTP_HOST'] ?? 'visamenged.com');
+    $uri = (string)($_SERVER['REQUEST_URI'] ?? '/');
+    return $scheme . '://' . $host . $uri;
+}
+
+function vm_og_image(): string
+{
+    $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+    $host = (string)($_SERVER['HTTP_HOST'] ?? 'visamenged.com');
+    return $scheme . '://' . $host . '/assets/img/visamenged-logo-flat-v3-transparent.png';
+}
+
+function vm_seo_jsonld(): string
+{
+    $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
+    $host = (string)($_SERVER['HTTP_HOST'] ?? 'visamenged.com');
+    $url = $scheme . '://' . $host;
+    $email = (string)vm_config_path('contact.email', 'Aesliexx@gmail.com');
+    $telegram = (string)vm_config_path('contact.telegram_url', 'https://t.me/Aesliex');
+    $handle = (string)vm_config_path('contact.telegram_handle', 'Aesliex');
+    return json_encode([
+        '@context' => 'https://schema.org',
+        '@graph' => [
+            [
+                '@type' => 'Organization',
+                'name' => 'VisaMenged',
+                'url' => $url,
+                'logo' => $url . '/assets/img/visamenged-logo-flat-v3-transparent.png',
+                'description' => 'Visa resources and document support for Ethiopian passport holders.',
+                'contactPoint' => [
+                    [
+                        '@type' => 'ContactPoint',
+                        'contactType' => 'customer service',
+                        'email' => $email,
+                        'url' => $telegram,
+                    ],
+                ],
+                'sameAs' => [
+                    $telegram,
+                ],
+            ],
+            [
+                '@type' => 'WebSite',
+                'name' => 'VisaMenged',
+                'url' => $url,
+                'potentialAction' => [
+                    '@type' => 'SearchAction',
+                    'target' => [
+                        '@type' => 'EntryPoint',
+                        'urlTemplate' => $url . '/forms.php?search={search_term_string}',
+                    ],
+                    'query-input' => 'required name=search_term_string',
+                ],
+            ],
+        ],
+    ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+}
 ?>

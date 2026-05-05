@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /handlers/
+Disallow: /storage/
+Disallow: /data/
+Disallow: /includes/
+Disallow: /assets/img/og-default.jpg
+
+Sitemap: https://visamenged.com/sitemap.xml
+
+# Crawl-delay is optional — remove if your host doesn't support it
+Crawl-delay: 1

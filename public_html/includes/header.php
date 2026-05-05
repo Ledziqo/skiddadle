@@ -6,7 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?= vm_h(($GLOBALS['vm_page_title'] ?? 'VisaMenged') . ' | VisaMenged') ?></title>
   <meta name="description" content="<?= vm_h($GLOBALS['vm_page_description'] ?? 'Official visa resources and document support for Ethiopian applicants.') ?>">
+  <link rel="canonical" href="<?= vm_h(vm_canonical_url()) ?>">
+  <link rel="alternate" hreflang="en" href="<?= vm_h(str_contains(vm_canonical_url(), '?') ? vm_canonical_url() . '&lang=en' : vm_canonical_url() . '?lang=en') ?>">
+  <link rel="alternate" hreflang="am" href="<?= vm_h(str_contains(vm_canonical_url(), '?') ? vm_canonical_url() . '&lang=am' : vm_canonical_url() . '?lang=am') ?>">
   <link rel="stylesheet" href="<?= vm_url('assets/css/style.css') ?>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="VisaMenged">
+  <meta property="og:title" content="<?= vm_h($GLOBALS['vm_page_title'] ?? 'VisaMenged') ?>">
+  <meta property="og:description" content="<?= vm_h($GLOBALS['vm_page_description'] ?? 'Official visa resources and document support for Ethiopian applicants.') ?>">
+  <meta property="og:url" content="<?= vm_h(vm_canonical_url()) ?>">
+  <meta property="og:image" content="<?= vm_h(vm_og_image()) ?>">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?= vm_h($GLOBALS['vm_page_title'] ?? 'VisaMenged') ?>">
+  <meta name="twitter:description" content="<?= vm_h($GLOBALS['vm_page_description'] ?? 'Official visa resources and document support for Ethiopian applicants.') ?>">
+  <meta name="twitter:image" content="<?= vm_h(vm_og_image()) ?>">
+  <script type="application/ld+json"><?= vm_seo_jsonld() ?></script>
   <script>
     (function(){
       const theme=localStorage.getItem('vm_theme')||'light';
