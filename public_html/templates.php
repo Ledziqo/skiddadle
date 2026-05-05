@@ -1,0 +1,4 @@
+<?php require_once __DIR__ . '/includes/functions.php'; $templates = vm_templates(); vm_page_start('Templates'); ?>
+<section class="page-hero"><span class="eyebrow">VisaMenged-created support templates</span><h1>Letters and worksheets for stronger document files.</h1><p>Use a rough draft generator, then request a polished embassy-ready version when you need tailored wording.</p><div class="hero-actions"><a class="button" href="<?= vm_url('letter-generator.php') ?>">Open letter generator</a><a class="button secondary" href="<?= vm_url('pricing.php') ?>">See paid support</a></div></section>
+<section class="grid cards-grid"><?php foreach ($templates as $template): require __DIR__ . '/includes/template-card.php'; endforeach; ?></section>
+<?php require __DIR__ . '/includes/disclaimer.php'; vm_page_end(); ?>

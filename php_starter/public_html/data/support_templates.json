@@ -1,0 +1,198 @@
+[
+  {
+    "id": "visa-cover-letter",
+    "title": "Visa Cover Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Applicant letter explaining purpose, dates, funding, ties, and attached documents.",
+    "usedFor": [
+      "visitor",
+      "tourist",
+      "business",
+      "family visit",
+      "student support"
+    ]
+  },
+  {
+    "id": "sponsorship-letter",
+    "title": "Sponsorship Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Sponsor explains relationship, covered costs, source of funds, and attached proof.",
+    "usedFor": [
+      "sponsored applicants",
+      "family visit",
+      "student",
+      "medical"
+    ]
+  },
+  {
+    "id": "invitation-letter",
+    "title": "Invitation Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Host/inviter letter for family, friend, business, or event visits.",
+    "usedFor": [
+      "family visit",
+      "business",
+      "conference",
+      "tourism with host"
+    ]
+  },
+  {
+    "id": "employer-support-letter",
+    "title": "Employer Support / Leave Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Employer confirms role, salary, leave dates, and return-to-work expectation.",
+    "usedFor": [
+      "employed applicants",
+      "visitor",
+      "business",
+      "Schengen",
+      "UK",
+      "Canada"
+    ]
+  },
+  {
+    "id": "business-owner-introduction",
+    "title": "Business Owner Introduction Letter",
+    "category": "letter",
+    "priceTier": "premium",
+    "description": "Self-employed/business owner letter explaining business activity and travel purpose.",
+    "usedFor": [
+      "business owner",
+      "self-employed",
+      "business visa",
+      "visitor"
+    ]
+  },
+  {
+    "id": "business-visa-invitation",
+    "title": "Business Visa Invitation Letter",
+    "category": "letter",
+    "priceTier": "premium",
+    "description": "Inviting company letter with meeting purpose, dates, and cost responsibility.",
+    "usedFor": [
+      "China M",
+      "India business",
+      "Turkey business",
+      "Schengen business"
+    ]
+  },
+  {
+    "id": "student-sponsorship-letter",
+    "title": "Student Sponsorship Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Parent/guardian/company confirms tuition and living-cost support.",
+    "usedFor": [
+      "student visa",
+      "Canada",
+      "China X1/X2",
+      "Turkey",
+      "Malaysia"
+    ]
+  },
+  {
+    "id": "medical-visa-support",
+    "title": "Medical Visa Support Letter",
+    "category": "letter",
+    "priceTier": "premium",
+    "description": "Patient/treatment letter referencing hospital appointment and funding.",
+    "usedFor": [
+      "India medical",
+      "Turkey medical",
+      "Thailand medical",
+      "Egypt medical"
+    ]
+  },
+  {
+    "id": "previous-refusal-explanation",
+    "title": "Previous Refusal Explanation Letter",
+    "category": "letter",
+    "priceTier": "premium",
+    "description": "Evidence-based explanation of previous refusal and changed circumstances.",
+    "usedFor": [
+      "previous refusal",
+      "UK",
+      "Canada",
+      "Schengen",
+      "USA"
+    ]
+  },
+  {
+    "id": "minor-travel-consent",
+    "title": "Minor Travel Consent Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Consent format for minors travelling with one parent/guardian.",
+    "usedFor": [
+      "minor travel",
+      "family visit",
+      "tourism"
+    ]
+  },
+  {
+    "id": "bank-statement-explanation",
+    "title": "Bank Statement Explanation Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Explains income source, large deposits, sponsorship transfers, or business cash flow.",
+    "usedFor": [
+      "financial proof",
+      "Schengen",
+      "UK",
+      "Canada"
+    ]
+  },
+  {
+    "id": "travel-itinerary-template",
+    "title": "Travel Itinerary Template",
+    "category": "itinerary",
+    "priceTier": "free",
+    "description": "Day-by-day travel plan and flight/accommodation summary.",
+    "usedFor": [
+      "tourist",
+      "visitor",
+      "Schengen",
+      "UK",
+      "Canada"
+    ]
+  },
+  {
+    "id": "document-checklist-template",
+    "title": "Document Checklist Template",
+    "category": "checklist",
+    "priceTier": "free",
+    "description": "Printable checklist users can organize by required/recommended/optional.",
+    "usedFor": [
+      "all visa types"
+    ]
+  },
+  {
+    "id": "company-support-letter",
+    "title": "Company Support Letter",
+    "category": "letter",
+    "priceTier": "premium",
+    "description": "Company-sponsored travel letter for staff business trips.",
+    "usedFor": [
+      "business visa",
+      "conference",
+      "corporate travel"
+    ]
+  },
+  {
+    "id": "host-accommodation-letter",
+    "title": "Host Accommodation Letter",
+    "category": "letter",
+    "priceTier": "basic",
+    "description": "Host confirms accommodation for applicant during visit.",
+    "usedFor": [
+      "family/friend visit",
+      "Schengen",
+      "Canada",
+      "UK"
+    ]
+  }
+]

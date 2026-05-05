@@ -1,0 +1,14 @@
+Options -Indexes
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^start/?$ start.php [L,QSA]
+RewriteRule ^country/([a-z0-9-]+)/?$ country.php?slug=$1 [L,QSA]
+RewriteRule ^visa/([a-z0-9-]+)/([a-z0-9-]+)/?$ visa.php?country=$1&type=$2 [L,QSA]
+RewriteRule ^pack/([a-z0-9-]+)/?$ pack.php?id=$1 [L,QSA]
+</IfModule>
+
+<FilesMatch "\.(json|log|md|sh)$">
+  Require all denied
+</FilesMatch>

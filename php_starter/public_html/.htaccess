@@ -1,0 +1,7 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^country/([a-z0-9-]+)/?$ country.php?slug=$1 [L,QSA]
+RewriteRule ^forms/?$ forms.php [L,QSA]
+RewriteRule ^templates/?$ templates.php [L,QSA]
+RewriteRule ^schengen/?$ schengen.php [L,QSA]
+RewriteRule ^checklist/?$ checklist-generator.php [L,QSA]

@@ -1,0 +1,133 @@
+[
+  {
+    "id": "uk-visitor-pack",
+    "title": "UK Visitor Visa Pack",
+    "country": "United Kingdom",
+    "price": "from 499 birr",
+    "includes": [
+      "cover letter",
+      "sponsor letter",
+      "employer letter",
+      "invitation letter",
+      "bank explanation",
+      "checklist",
+      "mistakes guide"
+    ]
+  },
+  {
+    "id": "schengen-tourist-family-pack",
+    "title": "Schengen Tourist/Family Visit Pack",
+    "country": "Schengen",
+    "price": "from 499 birr",
+    "includes": [
+      "Schengen checklist",
+      "cover letter",
+      "host invitation",
+      "sponsor letter",
+      "employment leave letter",
+      "insurance checklist",
+      "45-day warning"
+    ]
+  },
+  {
+    "id": "india-business-pack",
+    "title": "India Business Visa Pack",
+    "country": "India",
+    "price": "from 699 birr",
+    "includes": [
+      "India business checklist",
+      "Ethiopian company letter",
+      "Indian invitation letter",
+      "health-card reminder",
+      "fee/resource links"
+    ]
+  },
+  {
+    "id": "canada-visitor-pack",
+    "title": "Canada Visitor Visa Pack",
+    "country": "Canada",
+    "price": "from 699 birr",
+    "includes": [
+      "visitor checklist",
+      "invitation letter guide",
+      "sponsor support",
+      "purpose of travel letter",
+      "ties checklist"
+    ]
+  },
+  {
+    "id": "usa-b1b2-pack",
+    "title": "USA B1/B2 Interview Prep Pack",
+    "country": "United States",
+    "price": "from 699 birr",
+    "includes": [
+      "DS-160 prep checklist",
+      "interview worksheet",
+      "funding explanation",
+      "ties worksheet",
+      "common mistakes"
+    ]
+  },
+  {
+    "id": "china-business-tourist-pack",
+    "title": "China Business/Tourist Pack",
+    "country": "China",
+    "price": "from 699 birr",
+    "includes": [
+      "China category checklist",
+      "invitation letter guide",
+      "online flow guide",
+      "passport validity warning",
+      "Visa Center submission checklist"
+    ]
+  },
+  {
+    "id": "uae-tourist-pack",
+    "title": "UAE Tourist/Visit Pack",
+    "country": "UAE",
+    "price": "from 499 birr",
+    "includes": [
+      "UAE resource links",
+      "passport/photo checklist",
+      "anti-scam guide",
+      "sponsor/accommodation template"
+    ]
+  },
+  {
+    "id": "saudi-visit-pack",
+    "title": "Saudi Visit/Umrah/Work Prep Pack",
+    "country": "Saudi Arabia",
+    "price": "from 699 birr",
+    "includes": [
+      "portal links",
+      "visit purpose checklist",
+      "sponsor/employer templates",
+      "document review list"
+    ]
+  },
+  {
+    "id": "turkey-visitor-pack",
+    "title": "Turkey Visitor/Business Pack",
+    "country": "Turkey",
+    "price": "from 499 birr",
+    "includes": [
+      "pre-application guide",
+      "tourist/business checklist",
+      "cover letter",
+      "sponsor letter",
+      "itinerary"
+    ]
+  },
+  {
+    "id": "medical-travel-pack",
+    "title": "Medical Travel Visa Pack",
+    "country": "Multi-country",
+    "price": "from 999 birr",
+    "includes": [
+      "medical support letter",
+      "hospital appointment checklist",
+      "attendant letter",
+      "sponsor/funding letter"
+    ]
+  }
+]

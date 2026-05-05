@@ -1,0 +1,4 @@
+<?php require_once __DIR__ . '/includes/functions.php'; vm_page_start('About'); ?>
+<section class="page-hero"><span class="eyebrow">About VisaMenged</span><h1>The clear path to your visa application.</h1><p>VisaMenged is an Ethiopia-focused visa resource hub that organizes official links, forms, checklists and support templates for applicants preparing their own files.</p></section>
+<section class="feature-band"><h2>What we do</h2><div class="steps"><article><h3>Gather official resources</h3><p>Government, embassy, VFS, TLS and visa-center pages stay at the center of every guide.</p></article><article><h3>Support preparation</h3><p>Templates, checklists, draft letters and reviews help applicants organize evidence.</p></article><article><h3>Stay independent</h3><p>VisaMenged is not a decision-maker and does not guarantee outcomes.</p></article></div></section>
+<?php require __DIR__ . '/includes/disclaimer.php'; vm_page_end(); ?>

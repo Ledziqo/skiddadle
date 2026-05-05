@@ -1,0 +1,90 @@
+{
+  "defaults": {
+    "source_note": "Fees can change by nationality, visa subtype, entry count, appointment center, exchange rate, service fee and courier/SMS choices. Always verify on the official fee page before paying.",
+    "types": [
+      {"type": "Tourist / visitor", "fee": "Check official fee page", "what_to_prepare": "Purpose, itinerary, accommodation, funding, return ties."},
+      {"type": "Business", "fee": "Check official fee page", "what_to_prepare": "Invitation, meeting agenda, Ethiopian employer/business proof, funding."},
+      {"type": "Student", "fee": "Check official fee page", "what_to_prepare": "Admission, tuition/payment proof, study plan, funding, accommodation."},
+      {"type": "Medical", "fee": "Check official fee page", "what_to_prepare": "Hospital/treatment letter, cost estimate, medical history, funding, companion proof if needed."},
+      {"type": "Work", "fee": "Check official fee page", "what_to_prepare": "Work permit/approval, employer invitation, contract, qualifications."}
+    ]
+  },
+  "schengen": {
+    "fee_source_url": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/applying-schengen-visa_en",
+    "source_note": "European Commission short-stay Schengen fee: EUR 90 adults, EUR 45 children aged 6 to under 12; service-center fees may also apply. Long-stay/national visas use country rules.",
+    "types": [
+      {"type": "Tourist short-stay", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Schengen form, passport, photo, travel insurance, itinerary, accommodation, funds, Ethiopia return ties."},
+      {"type": "Family or friend visit", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Host invitation/accommodation, host ID/status, relationship proof, funds, insurance, ties."},
+      {"type": "Business short-stay", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Business invitation, employer/company letter, meeting agenda, funds, insurance, accommodation."},
+      {"type": "Medical short-stay", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Treatment letter, appointment, cost estimate, medical history, funds, accommodation."},
+      {"type": "Student / long-stay", "fee": "Country-specific national visa fee", "what_to_prepare": "Admission, funding, accommodation, insurance and national visa checklist from the embassy."}
+    ]
+  },
+  "united-kingdom": {
+    "fee_source_url": "https://www.gov.uk/visa-fees",
+    "source_note": "Use GOV.UK visa-fees tool for current exact amount. UK fees depend on visa route, length and where you apply.",
+    "types": [
+      {"type": "Standard Visitor", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Purpose, trip cost, accommodation, funds, employment/business/student proof, return ties."},
+      {"type": "Business visitor", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Meeting/event invitation, employer letter, company proof, travel costs and return ties."},
+      {"type": "Student", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "CAS/admission, funds, English/academic documents, TB/health requirements if applicable."},
+      {"type": "Medical visitor", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Private treatment letter, cost estimate, proof of funds, accommodation and return plan."},
+      {"type": "Work", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Certificate of sponsorship, job route, funds, qualifications and supporting documents."}
+    ]
+  },
+  "united-states": {
+    "fee_source_url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-reciprocity-tables.html",
+    "source_note": "Use U.S. Department of State fee and reciprocity tables. Visa application fee and any issuance/reciprocity fee depend on visa class and nationality.",
+    "types": [
+      {"type": "B1/B2 tourist/business/medical", "fee": "Check State Department MRV fee table", "what_to_prepare": "DS-160, appointment, purpose, interview story, funds and Ethiopia ties."},
+      {"type": "F/M student", "fee": "Check State Department + SEVIS fee rules", "what_to_prepare": "I-20/DS-2019, SEVIS receipt if required, school admission, funds, study plan."},
+      {"type": "Work visa", "fee": "Check State Department fee table", "what_to_prepare": "Petition/approval where required, employer documents, qualifications and interview support."},
+      {"type": "Medical treatment", "fee": "Usually B2 category; check official fee table", "what_to_prepare": "Doctor/treatment letter, cost estimate, ability to pay, return plan."}
+    ]
+  },
+  "canada": {
+    "fee_source_url": "https://ircc.canada.ca/english/information/fees/fees.asp",
+    "source_note": "IRCC fee list shows visitor visa CAD 100 per person, study permit CAD 150, work permit CAD 155, biometrics CAD 85 per person where required. Verify before paying.",
+    "types": [
+      {"type": "Visitor / TRV", "fee": "CAD 100 per person; biometrics CAD 85 if required", "what_to_prepare": "IRCC account, purpose, invitation if any, funds, travel history, ties."},
+      {"type": "Student / study permit", "fee": "CAD 150; biometrics CAD 85 if required", "what_to_prepare": "Letter of acceptance, tuition/funds, study plan, family ties, forms."},
+      {"type": "Work permit", "fee": "CAD 155; open work permit holder fee may add CAD 100; biometrics if required", "what_to_prepare": "Job offer/LMIA/exemption proof, employer documents, qualifications."},
+      {"type": "Business visitor", "fee": "Usually visitor/TRV fee; verify IRCC route", "what_to_prepare": "Invitation, meeting plan, Ethiopian company letter, funds and ties."},
+      {"type": "Medical visit", "fee": "Usually visitor/TRV fee; verify IRCC route", "what_to_prepare": "Treatment letter, cost estimate, funds and return plan."}
+    ]
+  },
+  "china": {
+    "fee_source_url": "https://www.visaforchina.cn/ADD3_EN/qianzhengyewu/jichuzhishi/changjianwenti",
+    "source_note": "China fees depend on nationality, entry count and visa-center service option. Addis Ababa center publishes schedule/service notices; service fee notices mention ordinary/express/urgent service fee levels.",
+    "types": [
+      {"type": "Tourist L", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Itinerary, hotel/host proof, passport, photo, online form and appointment materials."},
+      {"type": "Business M", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Chinese company invitation, Ethiopian company proof, trip purpose and dates."},
+      {"type": "Student X1/X2", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Admission notice, JW form where applicable, study plan and funding."},
+      {"type": "Work Z", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Work permit notification, employer documents, qualifications and medical/police documents if required."},
+      {"type": "Family Q/S", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Invitation, inviter ID/status, relationship proof and visit/residence purpose."},
+      {"type": "Medical", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Hospital invitation/treatment proof, cost/funding and accommodation plan."}
+    ]
+  },
+  "india": {
+    "fee_source_url": "https://indianvisaonline.gov.in/evisa/images/eTV_revised_fee_final.pdf",
+    "source_note": "India eVisa fees vary by nationality and eVisa type. The official country-wise eVisa fee table lists business/medical/conference-style categories; confirm Ethiopia row and route before paying.",
+    "types": [
+      {"type": "Tourist eVisa / tourist", "fee": "Check Indian official eVisa fee table", "what_to_prepare": "Passport, photo, purpose, itinerary, accommodation and funds."},
+      {"type": "Business", "fee": "Check Indian official eVisa fee table", "what_to_prepare": "Business card/company letter, Indian invitation, meeting purpose and funds."},
+      {"type": "Medical", "fee": "Check Indian official eVisa fee table", "what_to_prepare": "Hospital letter, appointment/treatment plan, cost estimate and attendant proof if needed."},
+      {"type": "Student", "fee": "Check Indian official/embassy route", "what_to_prepare": "Admission, fees/funding, accommodation and academic documents."}
+    ]
+  },
+  "united-arab-emirates": {"fee_source_url": "", "source_note": "UAE fees depend heavily on sponsor/airline/hotel/government channel and visa duration. Verify the approved channel before paying."},
+  "saudi-arabia": {"fee_source_url": "", "source_note": "Saudi fees depend on official portal route, purpose and insurance/service components. Verify through official Saudi route before paying."},
+  "turkey": {"fee_source_url": "", "source_note": "Turkey fees depend on eVisa/sticker visa route and nationality. Verify on official Turkish visa/pre-application source before paying."},
+  "thailand": {"fee_source_url": "", "source_note": "Thailand fees depend on visa type, embassy route and current consular fee schedule. Verify on official Thai source before paying."},
+  "south-africa": {"fee_source_url": "", "source_note": "South Africa fees depend on visa type and local mission/VFS route. Verify with official embassy/VFS source before paying."},
+  "kenya": {"fee_source_url": "", "source_note": "Kenya eTA/visa-related fees depend on official portal route and nationality. Verify on the official Kenya portal before paying."},
+  "qatar": {"fee_source_url": "", "source_note": "Qatar fees depend on sponsor, airline/hotel/portal route and nationality. Verify on official Qatar route before paying."},
+  "egypt": {"fee_source_url": "", "source_note": "Egypt fees depend on consular/eVisa route, nationality and visa type. Verify on official embassy/portal source before paying."},
+  "japan": {"fee_source_url": "", "source_note": "Japan visa fees can depend on nationality and entry count; some categories may be exempt. Verify with Embassy of Japan official instructions."},
+  "south-korea": {"fee_source_url": "", "source_note": "Korea fees depend on visa type, entries and embassy/portal route. Verify on Korea Visa Portal or embassy source."},
+  "malaysia": {"fee_source_url": "", "source_note": "Malaysia fees depend on eVisa/embassy route, nationality and visa type. Verify on official Malaysia source."},
+  "australia": {"fee_source_url": "", "source_note": "Australia fees depend on subclass. Verify through official ImmiAccount/Department of Home Affairs fee tools."},
+  "russia": {"fee_source_url": "", "source_note": "Russia fees depend on visa type, entry count, processing speed and consular route. Verify with official embassy/consular source."}
+}

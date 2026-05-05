@@ -1,0 +1,4 @@
+<?php $pageTitle='VisaMenged Templates'; include __DIR__.'/includes/header.php'; ?>
+<section class="page-head"><h1>Support Templates</h1><p>VisaMenged-created letters and worksheets to organize a stronger file. These are not official government forms.</p></section>
+<div class="resource-grid"><?php foreach(vm_load_json('support_templates.json') as $t): ?><article class="resource-card"><span class="badge"><?= vm_h($t['category']) ?></span><h3><?= vm_h($t['title']) ?></h3><p><?= vm_h($t['description']) ?></p><small><?= vm_h(implode(', ', $t['usedFor'])) ?></small><div class="actions"><a class="btn small" href="/letter-generator.php?template=<?= vm_h($t['id']) ?>">Generate</a></div></article><?php endforeach; ?></div>
+<?php include __DIR__.'/includes/footer.php'; ?>

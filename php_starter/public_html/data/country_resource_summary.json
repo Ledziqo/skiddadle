@@ -1,0 +1,158 @@
+{
+  "United Kingdom": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "United States": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Canada": {
+    "resources": 5,
+    "pdfs": 4,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Schengen Area": {
+    "resources": 1,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Germany": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "France": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 2,
+    "needs_verification": 0
+  },
+  "Italy": {
+    "resources": 2,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Netherlands": {
+    "resources": 3,
+    "pdfs": 3,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Sweden": {
+    "resources": 3,
+    "pdfs": 2,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Austria": {
+    "resources": 2,
+    "pdfs": 2,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Belgium": {
+    "resources": 2,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "India": {
+    "resources": 3,
+    "pdfs": 2,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "China": {
+    "resources": 4,
+    "pdfs": 3,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "United Arab Emirates": {
+    "resources": 2,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Saudi Arabia": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 1
+  },
+  "Qatar": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Turkey": {
+    "resources": 3,
+    "pdfs": 0,
+    "portals": 2,
+    "needs_verification": 0
+  },
+  "Thailand": {
+    "resources": 2,
+    "pdfs": 1,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "South Africa": {
+    "resources": 1,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Kenya": {
+    "resources": 3,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Egypt": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 1
+  },
+  "Japan": {
+    "resources": 2,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "South Korea": {
+    "resources": 2,
+    "pdfs": 1,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Malaysia": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Australia": {
+    "resources": 3,
+    "pdfs": 1,
+    "portals": 0,
+    "needs_verification": 0
+  },
+  "Russia": {
+    "resources": 2,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  }
+}

@@ -1,0 +1,1 @@
+window.VM_Basket={key:'visamenged_basket',all(){return JSON.parse(localStorage.getItem(this.key)||'[]')},add(item){const arr=this.all();arr.push(item);localStorage.setItem(this.key,JSON.stringify(arr));alert('Added to My Visa File');},clear(){localStorage.removeItem(this.key)}};

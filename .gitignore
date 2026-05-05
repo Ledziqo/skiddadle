@@ -1,0 +1,8 @@
+visamenged_public_html_deploy.zip
+deploy_staging_public_html/
+public_html/storage/submissions/*.json
+public_html/storage/uploads/*
+!public_html/storage/submissions/.htaccess
+!public_html/storage/uploads/.htaccess
+.DS_Store
+Thumbs.db

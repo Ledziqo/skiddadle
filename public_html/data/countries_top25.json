@@ -1,0 +1,227 @@
+[
+  {
+    "slug": "united-kingdom",
+    "name": "United Kingdom",
+    "priority": 1,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "uk",
+    "note": "Portal-first via GOV.UK/UKVI."
+  },
+  {
+    "slug": "united-states",
+    "name": "United States",
+    "priority": 2,
+    "status": "full_guide",
+    "region": "North America",
+    "hub": "usa",
+    "note": "DS-160 is online-only."
+  },
+  {
+    "slug": "canada",
+    "name": "Canada",
+    "priority": 3,
+    "status": "full_guide",
+    "region": "North America",
+    "hub": "canada",
+    "note": "IRCC downloadable PDFs and online portal."
+  },
+  {
+    "slug": "germany",
+    "name": "Germany",
+    "priority": 4,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen country; also include national/student/work pages later."
+  },
+  {
+    "slug": "france",
+    "name": "France",
+    "priority": 5,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Use France-Visas portal."
+  },
+  {
+    "slug": "italy",
+    "name": "Italy",
+    "priority": 6,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen country page."
+  },
+  {
+    "slug": "netherlands",
+    "name": "Netherlands",
+    "priority": 7,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "VFS Ethiopia checklists available."
+  },
+  {
+    "slug": "sweden",
+    "name": "Sweden",
+    "priority": 8,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen country page."
+  },
+  {
+    "slug": "austria",
+    "name": "Austria",
+    "priority": 9,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen country page."
+  },
+  {
+    "slug": "india",
+    "name": "India",
+    "priority": 10,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "india",
+    "note": "Embassy of India Addis PDF requirements."
+  },
+  {
+    "slug": "china",
+    "name": "China",
+    "priority": 11,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "china",
+    "note": "Visa Center Addis; category pages for L/M/Z/X/Q/S/G/C/J/D/R."
+  },
+  {
+    "slug": "united-arab-emirates",
+    "name": "United Arab Emirates",
+    "priority": 12,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "uae",
+    "note": "Embassy/approved channels; anti-scam warning."
+  },
+  {
+    "slug": "saudi-arabia",
+    "name": "Saudi Arabia",
+    "priority": 13,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "saudi",
+    "note": "Portal-first; hide unverified old PDFs."
+  },
+  {
+    "slug": "turkey",
+    "name": "Turkey",
+    "priority": 14,
+    "status": "full_guide",
+    "region": "Europe/Asia",
+    "hub": "turkey",
+    "note": "Sticker visa pre-application/e-Visa."
+  },
+  {
+    "slug": "thailand",
+    "name": "Thailand",
+    "priority": 15,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "thailand",
+    "note": "Thai MFA application form PDF."
+  },
+  {
+    "slug": "south-africa",
+    "name": "South Africa",
+    "priority": 16,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "south-africa",
+    "note": "BI-84 application form source included."
+  },
+  {
+    "slug": "kenya",
+    "name": "Kenya",
+    "priority": 17,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "kenya",
+    "note": "eTA portal-first."
+  },
+  {
+    "slug": "qatar",
+    "name": "Qatar",
+    "priority": 18,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "qatar",
+    "note": "Embassy/portal resources."
+  },
+  {
+    "slug": "egypt",
+    "name": "Egypt",
+    "priority": 19,
+    "status": "full_guide",
+    "region": "Africa/Middle East",
+    "hub": "egypt",
+    "note": "Use official embassy/consular pages; verify PDFs."
+  },
+  {
+    "slug": "japan",
+    "name": "Japan",
+    "priority": 20,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "japan",
+    "note": "Embassy Addis and official visa PDF."
+  },
+  {
+    "slug": "south-korea",
+    "name": "South Korea",
+    "priority": 21,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "korea",
+    "note": "Korea Visa Portal + embassy."
+  },
+  {
+    "slug": "malaysia",
+    "name": "Malaysia",
+    "priority": 22,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "malaysia",
+    "note": "eVisa/embassy resources."
+  },
+  {
+    "slug": "australia",
+    "name": "Australia",
+    "priority": 23,
+    "status": "full_guide",
+    "region": "Oceania",
+    "hub": "australia",
+    "note": "Forms page and ImmiAccount/visitor portal."
+  },
+  {
+    "slug": "russia",
+    "name": "Russia",
+    "priority": 24,
+    "status": "full_guide",
+    "region": "Europe/Asia",
+    "hub": "russia",
+    "note": "Online visa application form resource."
+  },
+  {
+    "slug": "belgium",
+    "name": "Belgium",
+    "priority": 25,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen/TLS; Ethiopia-specific warnings."
+  }
+]
