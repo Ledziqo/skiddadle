@@ -1,0 +1,21 @@
+{
+    "id": "20260504-140709-66f4456a",
+    "type": "checklist",
+    "created_at": "2026-05-04T14:07:09+00:00",
+    "ip_hash": "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+    "data": {
+        "country": "canada",
+        "visa_type": "visitor",
+        "citizenship": "Ethiopian",
+        "applying_from": "Ethiopia",
+        "city": "Addis Ababa",
+        "employment_status": "Employed",
+        "funding": "Sponsored",
+        "purpose": "family visit for two weeks",
+        "invitation": "Family/friend host",
+        "previous_refusal": "No",
+        "family_minor": "No minor",
+        "travel_date": "2026-06-01",
+        "contact": "test@example.com"
+    }
+}

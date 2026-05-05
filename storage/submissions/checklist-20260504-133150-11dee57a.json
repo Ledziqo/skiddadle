@@ -1,0 +1,21 @@
+{
+    "id": "20260504-133150-11dee57a",
+    "type": "checklist",
+    "created_at": "2026-05-04T13:31:50+00:00",
+    "ip_hash": "12ca17b49af2289436f303e0166030a21e525d266e209267433801a8fd4071a0",
+    "data": {
+        "country": "united-states",
+        "visa_type": "student",
+        "citizenship": "Ethiopian",
+        "applying_from": "Ethiopia",
+        "city": "",
+        "employment_status": "Employed",
+        "funding": "Self-funded",
+        "purpose": "",
+        "invitation": "No invitation",
+        "previous_refusal": "No",
+        "family_minor": "No minor",
+        "travel_date": "",
+        "contact": ""
+    }
+}
