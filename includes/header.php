@@ -10,6 +10,15 @@
   <link rel="alternate" hreflang="en" href="<?= vm_h(str_contains(vm_canonical_url(), '?') ? vm_canonical_url() . '&lang=en' : vm_canonical_url() . '?lang=en') ?>">
   <link rel="alternate" hreflang="am" href="<?= vm_h(str_contains(vm_canonical_url(), '?') ? vm_canonical_url() . '&lang=am' : vm_canonical_url() . '?lang=am') ?>">
   <link rel="stylesheet" href="<?= vm_url('assets/css/style.css') ?>">
+  <style>
+    /* Critical fallback for homepage metrics if cached CSS is stale */
+    .trust-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#d8e8f8;border-bottom:1px solid #d8e8f8}
+    .trust-strip article{background:#fff;padding:22px clamp(16px,5vw,70px);text-align:center}
+    .trust-strip strong{display:block;font-size:clamp(32px,4vw,48px);line-height:1;color:#062d66}
+    .trust-strip span{display:block;margin-top:4px;font-size:14px;font-weight:800;color:#445c78}
+    @media(max-width:980px){.trust-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){.trust-strip article{padding:18px 14px}.trust-strip strong{font-size:28px}}
+  </style>
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="VisaMenged">
   <meta property="og:title" content="<?= vm_h($GLOBALS['vm_page_title'] ?? 'VisaMenged') ?>">
