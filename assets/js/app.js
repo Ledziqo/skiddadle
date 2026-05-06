@@ -160,4 +160,60 @@
       URL.revokeObjectURL(url);
     });
   });
+
+  document.querySelectorAll('.drop-upload-zone').forEach(zone => {
+    const input = zone.querySelector('input[type="file"]');
+    const summary = zone.querySelector('[data-file-summary]');
+    if (!input || !summary) { return; }
+    const updateSummary = () => {
+      const files = [...(input.files || [])];
+      if (!files.length) {
+        summary.textContent = 'No files selected';
+        return;
+      }
+      const names = files.slice(0, 3).map(file => file.name);
+      summary.textContent = files.length > 3 ? `${files.length} files: ${names.join(', ')}...` : names.join(', ');
+    };
+    ['dragenter', 'dragover'].forEach(eventName => {
+      zone.addEventListener(eventName, event => {
+        event.preventDefault();
+        zone.classList.add('drag-over');
+      });
+    });
+    ['dragleave', 'drop'].forEach(eventName => {
+      zone.addEventListener(eventName, event => {
+        event.preventDefault();
+        zone.classList.remove('drag-over');
+      });
+    });
+    zone.addEventListener('drop', event => {
+      const files = event.dataTransfer && event.dataTransfer.files;
+      if (!files || !files.length) { return; }
+      input.files = files;
+      input.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+    input.addEventListener('change', updateSummary);
+  });
+
+  const paddleConfig = window.VM_PADDLE || null;
+  if (paddleConfig && window.Paddle && paddleConfig.token) {
+    if ((paddleConfig.env || '').toLowerCase() === 'sandbox' && Paddle.Environment) {
+      Paddle.Environment.set('sandbox');
+    }
+    Paddle.Initialize({ token: paddleConfig.token });
+    document.querySelectorAll('[data-paddle-checkout]').forEach(el => {
+      el.addEventListener('click', (event) => {
+        const priceId = el.getAttribute('data-paddle-price-id');
+        if (!priceId) { return; }
+        event.preventDefault();
+        Paddle.Checkout.open({
+          items: [{ priceId, quantity: 1 }],
+          customData: {
+            product: el.getAttribute('data-paddle-product') || 'service',
+            source_page: window.location.pathname
+          }
+        });
+      });
+    });
+  }
 })();

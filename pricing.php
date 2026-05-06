@@ -1,44 +1,29 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/smart-engine.php';
-$packs = vm_packs();
 vm_page_start('VisaMenged Services — Document Review & Letter Writing', 'Paid visa services for Ethiopian applicants. Document review, letter writing, checklist support and file organization from 999 birr.');
 ?>
 <section class="page-hero pricing-hero">
-  <span class="eyebrow">Paid help</span>
-  <h1>Pick the one thing you want fixed.</h1>
-  <p>No approval promises. No confusing package maze. Choose the closest problem, send your situation, and we tell you what to clean up.</p>
+  <span class="eyebrow">Smart services</span>
+  <h1>The only 4 paid services on VisaMenged.</h1>
+  <p>Built for Ethiopian applicants who want faster, cleaner, and more submission-ready files without confusion.</p>
 </section>
 <section class="pricing-grid simple-pricing-grid">
-  <article class="card price-card"><h2>Use free tools first</h2><p class="price">0 birr</p><p>Country guide, official forms, checklist and saved resource list.</p><a class="button secondary" href="<?= vm_url('checklist-generator.php') ?>">Start free</a></article>
-  <article class="card price-card featured"><h2>Check my file</h2><p class="price">from 999 birr</p><p>Missing documents, weak evidence and the next fixes before you submit.</p><a class="button" href="<?= vm_url('review-request.php') ?>">Request check</a></article>
-  <article class="card price-card"><h2>Fix my letters</h2><p class="price">from 1,500 birr</p><p>Cover, sponsor, invitation, employer, business, student or refusal wording.</p><a class="button secondary" href="<?= vm_url('letter-generator.php') ?>">Start letter</a></article>
-  <article class="card price-card"><h2>Organize everything</h2><p class="price">from 3,000 birr</p><p>Full document order, consistency review, risk notes and final checklist.</p><a class="button secondary" href="<?= vm_url('review-request.php') ?>">Request review</a></article>
+  <article class="card price-card"><h2>Quick Checklist Cleanup</h2><p class="price">499 birr</p><p>Personalized checklist, missing-item warnings, and submission order built from official requirements.</p><a class="button secondary" href="<?= vm_url('review-request.php') ?>" data-paddle-checkout data-paddle-price-id="pri_01kqzbs9118mc38j9szyzvzddf" data-paddle-product="quick-checklist-cleanup">Get checklist</a></article>
+  <article class="card price-card"><h2>Letter Pack</h2><p class="price">from 1,500 birr</p><p>Cover, sponsor, employer, invitation, and refusal-response drafts tailored to your visa type.</p><a class="button secondary" href="<?= vm_url('letter-generator.php') ?>" data-paddle-checkout data-paddle-price-id="pri_01kqzbve8tnkvy354va6qdav21" data-paddle-product="letter-pack">Generate letters</a></article>
+  <article class="card price-card"><h2>Interview Readiness Pack</h2><p class="price">from 1,200 birr</p><p>Country-specific interview questions, recommended answer angles, and common red-flag warnings.</p><a class="button secondary" href="<?= vm_url('interview-readiness.php') ?>" data-paddle-checkout data-paddle-price-id="pri_01kqzbtezwf7ppqf87zy470a06" data-paddle-product="interview-readiness-pack">Prepare interview</a></article>
+  <article class="card price-card featured"><h2>Complete File Organization</h2><p class="price">from 3,000 birr</p><p>Full-file consistency cleanup across purpose, dates, finance, invitation, and return-ties evidence.</p><a class="button" href="<?= vm_url('review-request.php') ?>" data-paddle-checkout data-paddle-price-id="pri_01kqzbx5ra4hnxe0dcpn570djt" data-paddle-product="complete-file-organization">Organize full file</a></article>
 </section>
 <section class="premium-process">
   <div><span class="eyebrow">How it works</span><h2>Simple flow.</h2></div>
   <div class="path-steps">
     <article><span>01</span><h3>Send the situation</h3><p>Country, visa type, deadline, concern, and available documents.</p></article>
-    <article><span>02</span><h3>We map the weak points</h3><p>Purpose, money, sponsor, invitation, return ties and refusal risk.</p></article>
+    <article><span>02</span><h3>Smart analysis runs</h3><p>Purpose, money, sponsor, invitation, return ties and refusal risk are mapped instantly.</p></article>
     <article><span>03</span><h3>You receive a fix plan</h3><p>Checklist, draft wording, evidence order, and official source links.</p></article>
     <article><span>04</span><h3>You verify officially</h3><p>Final rules still come from the embassy, government, VFS, TLS or visa-center source.</p></article>
   </div>
 </section>
-<details class="all-services-drawer">
-<summary>Show all detailed services</summary>
-<section class="grid cards-grid pack-grid">
-<?php foreach ($packs as $pack): ?>
-  <article class="card pack-card">
-    <div class="card-top"><span class="badge"><?= vm_h($pack['country'] ?? '') ?></span><span class="badge muted"><?= vm_h($pack['price'] ?? '') ?></span></div>
-    <h3><?= vm_h($pack['title'] ?? '') ?></h3>
-    <p><?= vm_h($pack['tagline'] ?? '') ?></p>
-    <ul><?php foreach ((array)($pack['includes'] ?? []) as $item): ?><li><?= vm_h($item) ?></li><?php endforeach; ?></ul>
-    <div class="actions">
-      <a class="button secondary" href="<?= vm_url('pack.php?id=' . vm_h($pack['id'] ?? '')) ?>">Request service</a>
-      <button class="button ghost" type="button" data-add-basket='<?= vm_h(json_encode(['type'=>'Service','title'=>$pack['title'] ?? 'Service','meta'=>$pack['price'] ?? '','url'=>vm_url('pack.php?id=' . (string)($pack['id'] ?? ''))], JSON_UNESCAPED_SLASHES)) ?>'>Save for later</button>
-    </div>
-  </article>
-<?php endforeach; ?>
+<section class="notice">
+  <strong>Service scope:</strong> VisaMenged offers only these four paid services so the experience stays simple, fast, and consistent.
 </section>
-</details>
 <?php require __DIR__ . '/includes/disclaimer.php'; vm_page_end(); ?>

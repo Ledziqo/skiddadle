@@ -1,6 +1,8 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/smart-provider.php';
+
 function vm_pick(array $options, int $seed, int $offset = 0): string
 {
     if (!$options) { return ''; }
@@ -41,6 +43,11 @@ function vm_letter_template_label(string $templateId): string
 
 function vm_generate_letter_draft(array $payload): array
 {
+    $remoteDraft = vm_remote_letter_draft($payload);
+    if ($remoteDraft !== null) {
+        return $remoteDraft;
+    }
+
     $seed = (int)($payload['variant_seed'] ?? vm_smart_seed($payload));
     $templateId = (string)($payload['template'] ?? 'visa-cover-letter');
     $name = trim((string)($payload['name'] ?? ''));
@@ -125,6 +132,9 @@ function vm_generate_letter_draft(array $payload): array
             $body .= vm_sentence_html("I have organized my documents so the application form, purpose evidence, funding proof and return-ties evidence tell one consistent story.");
     }
 
+    $body .= vm_sentence_html("For purpose evidence, I have tried to make the travel reason clear through the documents attached to the application. The details in this letter should be read together with the application form, itinerary, invitation or booking evidence, and any other documents that explain why the trip is needed.");
+    $body .= vm_sentence_html("For financial evidence, the file should show how the trip will be paid for and why the available funds are reasonable for the planned stay. If a sponsor, employer, school, host or organization is involved, the final version should clearly explain the relationship and what costs they will cover.");
+    $body .= vm_sentence_html("For return evidence, I intend the final file to show my ongoing responsibilities in Ethiopia, including {$ties}. These details are important because the application should make it clear that the visit is temporary and that I plan to follow the conditions of the visa.");
     $body .= vm_sentence_html(vm_pick([
         'I understand that the final decision belongs only to the official visa authority.',
         'I have tried to make the purpose, funding and return evidence clear for review.',
@@ -168,6 +178,11 @@ function vm_letter_risk_notes(array $payload): array
 
 function vm_refusal_smart_plan(array $payload): array
 {
+    $remotePlan = vm_remote_refusal_plan($payload);
+    if ($remotePlan !== null) {
+        return $remotePlan['steps'];
+    }
+
     $reason = strtolower((string)($payload['reason'] ?? ''));
     $changes = trim((string)($payload['changes'] ?? ''));
     $items = [
@@ -194,6 +209,11 @@ function vm_refusal_smart_plan(array $payload): array
 
 function vm_file_brain_analyze(array $payload): array
 {
+    $remoteBrain = vm_remote_file_brain($payload);
+    if ($remoteBrain !== null) {
+        return $remoteBrain;
+    }
+
     $country = strtolower((string)($payload['country'] ?? ''));
     $visaType = strtolower((string)($payload['visa_type'] ?? ''));
     $funding = strtolower((string)($payload['funding'] ?? ''));
@@ -203,6 +223,7 @@ function vm_file_brain_analyze(array $payload): array
     $notes = strtolower((string)($payload['notes'] ?? ''));
     $uploads = (array)($payload['uploads'] ?? []);
     $uploadGroups = (array)($payload['upload_groups'] ?? []);
+    $uploadedDetails = (array)($payload['upload_details'] ?? []);
     $score = 82;
     $mustFix = [];
     $likelyMissing = [];
@@ -303,6 +324,49 @@ function vm_file_brain_analyze(array $payload): array
 
     $score = max(18, min(94, $score));
     $label = $score >= 80 ? 'Good pre-check' : ($score >= 62 ? 'Needs cleanup' : 'High-risk file');
+    $groupLabels = [
+        'passport' => 'Passport / ID',
+        'form' => 'Application form / portal confirmation',
+        'money' => 'Bank / funding proof',
+        'work' => 'Employment / business proof',
+        'invitation' => 'Invitation / admission / host proof',
+        'refusal' => 'Previous refusal letter',
+        'other' => 'Other supporting documents',
+    ];
+    $documentReview = [];
+    foreach ($groupLabels as $key => $labelText) {
+        $count = (int)($uploadGroups[$key] ?? 0);
+        $names = array_values(array_filter(array_map('strval', (array)($uploadedDetails[$key] ?? []))));
+        if ($count > 0) {
+            $documentReview[] = $labelText . ': uploaded ' . $count . ' file' . ($count === 1 ? '' : 's') . '. Check that every name, date, passport number, address and amount matches the application form. Files saved: ' . implode(', ', $names ?: ['uploaded file']) . '.';
+        } else {
+            $documentReview[] = $labelText . ': not uploaded. Add this group if it applies to the visa type, because missing groups make the officer work harder to understand the file.';
+        }
+    }
+    $detailedExplanations = [
+        'Purpose story: the reason for travel should be easy to understand in under one minute. The form, cover letter, itinerary, invitation and uploaded evidence should all describe the same purpose using the same dates and names.',
+        'Money story: the file should show who pays, where the money comes from, whether the balance is realistic for the trip, and why any large deposits make sense.',
+        'Return story: the file should show a clear reason to return to Ethiopia, such as work, business, school, family responsibility, property, ongoing treatment, or a fixed obligation after the trip.',
+        'Document order: put identity first, then application confirmation, purpose evidence, funding proof, work/business/student proof, host or invitation evidence, refusal explanation if any, and other supporting documents last.',
+    ];
+    if (str_contains($visaType, 'business')) {
+        $detailedExplanations[] = 'Business files should connect the Ethiopian employer/business, the foreign inviter, the meeting agenda and the cost responsibility. A business invitation alone is usually not enough.';
+    }
+    if (str_contains($visaType, 'student') || str_contains($visaType, 'study')) {
+        $detailedExplanations[] = 'Student files should connect admission, tuition, living costs, sponsor/funding capacity, study history and the plan after studies. The chosen course should make sense with past education or work.';
+    }
+    if (str_contains($visaType, 'tourist') || str_contains($visaType, 'visitor')) {
+        $detailedExplanations[] = 'Visitor files should keep the trip realistic. The length of stay, budget, accommodation and activities should fit the applicant income and leave period.';
+    }
+    $submissionOrder = [
+        '1. Passport biodata page and any previous visas/travel history pages.',
+        '2. Application form, appointment confirmation, payment receipt or portal confirmation.',
+        '3. Visa-type purpose proof: itinerary, invitation, admission, hospital letter, meeting agenda or event proof.',
+        '4. Funding proof: bank statements, salary/business income, sponsor support if used, and source-of-funds explanation where needed.',
+        '5. Ethiopia ties: employment letter, business license/tax, school letter, family obligations, property or other return evidence.',
+        '6. Explanations: cover letter, previous refusal response, large-deposit note, sponsor relationship note or timeline note.',
+        '7. Supporting copies in the same order as the official checklist.',
+    ];
 
     return [
         'score' => $score,
@@ -311,7 +375,10 @@ function vm_file_brain_analyze(array $payload): array
         'must_fix' => array_values(array_unique($mustFix)),
         'likely_missing' => array_values(array_unique($likelyMissing)),
         'consistency_checks' => array_values(array_unique($consistencyChecks)),
-        'review_pitch' => 'The smart pre-check can find patterns, but a real audit needs human review of the actual uploaded documents, dates, names, statements and contradictions.',
+        'document_review' => $documentReview,
+        'detailed_explanations' => $detailedExplanations,
+        'submission_order' => $submissionOrder,
+        'review_pitch' => 'The smart pre-check finds likely gaps, contradictions and timing risks so you can clean the full file before submission.',
     ];
 }
 

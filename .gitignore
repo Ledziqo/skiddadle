@@ -6,3 +6,5 @@ public_html/storage/uploads/*
 !public_html/storage/uploads/.htaccess
 .DS_Store
 Thumbs.db
+.env
+*.env

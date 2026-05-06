@@ -4,7 +4,8 @@
 <?php
 $vm_current_page = basename(parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH) ?: 'index.php');
 $vm_nav_items = [
-  ['href' => 'index.php#country-guides', 'label' => vm_t('country_guides_nav'), 'active' => in_array($vm_current_page, ['index.php', 'country.php', 'visa.php', 'resource.php'], true)],
+  ['href' => 'index.php', 'label' => vm_t('home'), 'active' => $vm_current_page === 'index.php'],
+  ['href' => 'guides.php', 'label' => vm_t('country_guides_nav'), 'active' => in_array($vm_current_page, ['guides.php', 'country.php', 'visa.php', 'resource.php'], true)],
   ['href' => 'forms.php', 'label' => vm_t('official_forms_nav'), 'active' => $vm_current_page === 'forms.php'],
   ['href' => 'checklist-generator.php', 'label' => vm_t('free_checklist_nav'), 'active' => $vm_current_page === 'checklist-generator.php'],
   ['href' => 'schengen.php', 'label' => vm_t('schengen_nav'), 'active' => $vm_current_page === 'schengen.php'],

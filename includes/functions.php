@@ -5,6 +5,29 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
 }
 
+function vm_load_env_file(): void
+{
+    static $loaded = false;
+    if ($loaded) { return; }
+    $loaded = true;
+    $envPath = __DIR__ . '/../.env';
+    if (!is_file($envPath)) { return; }
+    $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    if (!is_array($lines)) { return; }
+    foreach ($lines as $line) {
+        $line = trim((string)$line);
+        if ($line === '' || str_starts_with($line, '#') || !str_contains($line, '=')) { continue; }
+        [$key, $value] = array_map('trim', explode('=', $line, 2));
+        if ($key === '') { continue; }
+        $value = trim($value, "\"'");
+        if (getenv($key) === false) { putenv($key . '=' . $value); }
+        if (!isset($_ENV[$key])) { $_ENV[$key] = $value; }
+        if (!isset($_SERVER[$key])) { $_SERVER[$key] = $value; }
+    }
+}
+
+vm_load_env_file();
+
 const VM_DISCLAIMER = 'VisaMenged is independent guidance. We are not an embassy, government agency, immigration lawyer, or visa decision-maker. We gather official resources and provide support templates/checklists. Always verify final requirements on the official embassy, government, VFS, TLS, or visa-center website before applying. VisaMenged does not guarantee approval.';
 
 function vm_config(): array
@@ -131,16 +154,16 @@ function vm_t(string $key): string
         'official_forms_nav' => 'Official forms',
         'free_checklist_nav' => 'Free checklist',
         'schengen_nav' => 'Schengen visas',
-        'paid_help_nav' => 'Paid help',
+        'paid_help_nav' => 'Document Support',
         'home_hero_title' => 'Visa guides and document help for Ethiopian applicants.',
-        'home_hero_body' => 'Pick a country guide, open official forms, follow the steps, and request paid help when your file needs fixing.',
+        'home_hero_body' => 'Pick a country guide, open official forms, follow the steps, and request document support when your file needs polishing.',
         'browse_country_guides' => 'Browse Country Guides',
-        'see_paid_help' => 'See Paid Help',
+        'see_paid_help' => 'Get Document Support',
         'start_destination' => 'Start with your destination.',
         'browse_all_forms' => 'Browse all forms',
-        'paid_help_simple_title' => 'Choose one clear fix.',
-        'paid_help_simple_body' => 'Start free. Pay only when you want us to clean up a weak part of the file.',
-        'compare_help' => 'Compare help',
+        'paid_help_simple_title' => 'Choose one clear document fix.',
+        'paid_help_simple_body' => 'Start free. Upgrade only when you want a real person to polish a weak part of the file.',
+        'compare_help' => 'Compare support options',
         'official_resources' => 'official resources',
         'no_approval' => 'approval promises',
         'no_login' => 'login needed',
@@ -195,7 +218,7 @@ function vm_t(string $key): string
         'official_forms_nav' => ['am' => 'ኦፊሴላዊ ፎርሞች'],
         'free_checklist_nav' => ['am' => 'ነፃ ቼክሊስት'],
         'schengen_nav' => ['am' => 'ሸንገን ቪዛ'],
-        'paid_help_nav' => ['am' => 'የሚከፈል እገዛ'],
+        'paid_help_nav' => ['am' => 'የሰነድ ድጋፍ'],
         'home_hero_title' => ['am' => 'ለኢትዮጵያውያን የቪዛ መመሪያ እና የሰነድ እገዛ።'],
         'home_hero_body' => ['am' => 'አገር ይምረጡ፣ ኦፊሴላዊ ፎርሞችን ይክፈቱ፣ ደረጃዎቹን ይከተሉ፣ ፋይልዎ መስተካከል ሲፈልግ የሚከፈል እገዛ ይጠይቁ።'],
         'browse_country_guides' => ['am' => 'የአገር መመሪያዎችን ይመልከቱ'],
@@ -692,7 +715,7 @@ function vm_og_image(): string
 {
     $scheme = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http';
     $host = (string)($_SERVER['HTTP_HOST'] ?? 'visamenged.com');
-    return $scheme . '://' . $host . '/assets/img/visamenged-logo-flat-v3-transparent.png';
+    return $scheme . '://' . $host . '/assets/img/icon-logo.png';
 }
 
 function vm_seo_jsonld(): string
@@ -710,7 +733,7 @@ function vm_seo_jsonld(): string
                 '@type' => 'Organization',
                 'name' => 'VisaMenged',
                 'url' => $url,
-                'logo' => $url . '/assets/img/visamenged-logo-flat-v3-transparent.png',
+                'logo' => $url . '/assets/img/icon-logo.png',
                 'description' => 'Visa resources and document support for Ethiopian passport holders.',
                 'contactPoint' => [
                     [

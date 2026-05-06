@@ -2,6 +2,7 @@
 require_once __DIR__ . '/includes/functions.php';
 require_once __DIR__ . '/includes/smart-engine.php';
 $templates = vm_templates();
+$countries = vm_countries();
 $selected = (string)($_GET['template'] ?? '');
 $draft = null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -17,7 +18,7 @@ vm_page_start('Free Visa Letter Generator for Ethiopians', 'Generate free visa l
     <?= vm_csrf_field() ?>
     <label>Template <select name="template"><?php foreach ($templates as $template): ?><option value="<?= vm_h($template['id']) ?>" <?= $selected === ($template['id'] ?? '') ? 'selected' : '' ?>><?= vm_h($template['title']) ?></option><?php endforeach; ?></select></label>
     <label>Applicant name <input name="name" required></label>
-    <label>Destination country <input name="country" required></label>
+    <label>Destination country <select name="country" required><option value="">Select destination</option><?php foreach ($countries as $country): ?><option value="<?= vm_h($country['name'] ?? '') ?>"><?= vm_h($country['name'] ?? '') ?></option><?php endforeach; ?></select></label>
     <label>Travel dates <input name="dates" placeholder="June 10-24, 2026"></label>
     <label>Funding <input name="funding" placeholder="self-funded, sponsored by..."></label>
     <label>Purpose <textarea name="purpose" rows="4" required></textarea></label>

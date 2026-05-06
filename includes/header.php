@@ -32,13 +32,14 @@
 <body>
 <header class="site-header">
   <a class="brand" href="<?= vm_url('index.php') ?>" aria-label="VisaMenged home">
-    <img src="<?= vm_url('assets/img/visamenged-logo-flat-v3-transparent.png') ?>" alt="VisaMenged">
+    <img src="<?= vm_url('assets/img/icon-logo.png') ?>" alt="" class="brand-icon">
+    <span class="brand-text"><span class="brand-visa">Visa</span><span class="brand-menged">Menged</span></span>
   </a>
   <?php require __DIR__ . '/nav.php'; ?>
   <div class="top-actions">
     <div class="language-switch" aria-label="Language switch">
       <a class="<?= vm_lang() === 'en' ? 'active' : '' ?>" href="<?= vm_h(vm_lang_url('en')) ?>">EN</a>
-      <a class="<?= vm_lang() === 'am' ? 'active' : '' ?>" href="<?= vm_h(vm_lang_url('am')) ?>">አማ</a>
+      <a class="<?= vm_lang() === 'am' ? 'active' : '' ?>" href="<?= vm_h(vm_lang_url('am')) ?>">AM</a>
     </div>
     <button class="theme-switch" type="button" data-theme-toggle aria-label="Toggle light or dark mode" aria-pressed="false">
       <span>Light</span>
