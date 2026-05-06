@@ -58,6 +58,31 @@ function vm_country_flag(string $slug): string
         'australia' => '🇦🇺',
         'russia' => '🇷🇺',
         'belgium' => '🇧🇪',
+        'oman' => '🇴🇲',
+        'kuwait' => '🇰🇼',
+        'bahrain' => '🇧🇭',
+        'jordan' => '🇯🇴',
+        'lebanon' => '🇱🇧',
+        'israel' => '🇮🇱',
+        'morocco' => '🇲🇦',
+        'tunisia' => '🇹🇳',
+        'djibouti' => '🇩🇯',
+        'sudan' => '🇸🇩',
+        'south-sudan' => '🇸🇸',
+        'uganda' => '🇺🇬',
+        'tanzania' => '🇹🇿',
+        'rwanda' => '🇷🇼',
+        'ghana' => '🇬🇭',
+        'nigeria' => '🇳🇬',
+        'singapore' => '🇸🇬',
+        'indonesia' => '🇮🇩',
+        'philippines' => '🇵🇭',
+        'pakistan' => '🇵🇰',
+        'bangladesh' => '🇧🇩',
+        'spain' => '🇪🇸',
+        'portugal' => '🇵🇹',
+        'switzerland' => '🇨🇭',
+        'ireland' => '🇮🇪',
     ];
     return $map[$slug] ?? '🌍';
 }
@@ -323,6 +348,119 @@ function vm_public_visa_type_rows(string $slug, string $hub = ''): array
         ];
     }
     return $rows;
+}
+
+function vm_public_visa_type_rows_for_resource(array $resource, string $hub = '', int $limit = 4): array
+{
+    $slug = (string)($resource['slug'] ?? '');
+    $rows = vm_public_visa_type_rows($slug, $hub);
+    if (!$rows) { return []; }
+
+    $haystack = strtolower(trim((string)($resource['visa_type'] ?? '') . ' ' . (string)($resource['title'] ?? '') . ' ' . (string)($resource['category'] ?? '')));
+    if ($haystack === '' || str_contains($haystack, 'all visa') || str_contains($haystack, 'fees')) {
+        return array_slice($rows, 0, $limit);
+    }
+
+    $groups = [
+        'tourist' => ['tourist', 'visitor', 'visit', 'temporary resident', 'trv', 'short-stay', 'eta', 'evisa'],
+        'business' => ['business', 'conference', 'meeting', 'm visa', 'b1'],
+        'student' => ['student', 'study', 'school', 'admission', 'f/m', 'study permit'],
+        'medical' => ['medical', 'treatment', 'hospital', 'patient'],
+        'work' => ['work', 'employment', 'worker', 'skilled', 'permit', 'z visa'],
+        'family' => ['family', 'friend', 'spouse', 'dependent', 'personal visit'],
+        'transit' => ['transit'],
+    ];
+
+    $scoreRow = function (array $row) use ($haystack, $groups): int {
+        $rowText = strtolower((string)($row['type'] ?? ''));
+        $score = 0;
+        foreach ($groups as $keywords) {
+            $resourceHit = false;
+            $rowHit = false;
+            foreach ($keywords as $keyword) {
+                if (str_contains($haystack, $keyword)) { $resourceHit = true; }
+                if (str_contains($rowText, $keyword)) { $rowHit = true; }
+            }
+            if ($resourceHit && $rowHit) { $score += 10; }
+        }
+        foreach (array_filter(preg_split('/[^a-z0-9]+/', $haystack) ?: [], fn($word) => strlen($word) > 3) as $word) {
+            if (str_contains($rowText, $word)) { $score += 2; }
+        }
+        return $score;
+    };
+
+    usort($rows, function (array $a, array $b) use ($scoreRow): int {
+        return $scoreRow($b) <=> $scoreRow($a);
+    });
+
+    return array_slice($rows, 0, $limit);
+}
+
+function vm_fee_currency_rates_to_etb(): array
+{
+    return [
+        'USD' => 157.0,
+        'EUR' => 185.0,
+        'GBP' => 211.0,
+        'CAD' => 115.0,
+        'AUD' => 103.0,
+        'AED' => 43.0,
+        'SAR' => 42.0,
+        'OMR' => 408.0,
+        'KWD' => 510.0,
+        'BHD' => 416.0,
+        'JOD' => 221.0,
+        'ILS' => 42.0,
+        'MAD' => 16.0,
+        'SGD' => 121.0,
+        'QAR' => 43.0,
+        'JPY' => 1.05,
+        'MYR' => 40.0,
+        'IDR' => 0.0097,
+    ];
+}
+
+function vm_format_birr_amount(float $amount): string
+{
+    if ($amount >= 10000) {
+        $rounded = round($amount / 100) * 100;
+    } elseif ($amount >= 1000) {
+        $rounded = round($amount / 50) * 50;
+    } else {
+        $rounded = round($amount / 10) * 10;
+    }
+    return number_format((float)$rounded, 0) . ' birr';
+}
+
+function vm_fee_display(string $fee): string
+{
+    $fee = preg_replace('/\bUS\$/i', 'USD ', $fee) ?? $fee;
+    $rates = vm_fee_currency_rates_to_etb();
+    $currencyPattern = implode('|', array_keys($rates));
+    $pattern = '/\b(' . $currencyPattern . ')\s*\$?\s*([0-9][0-9,]*(?:\.[0-9]+)?(?:\s*(?:\/|-)\s*[0-9][0-9,]*(?:\.[0-9]+)?\+?)*)\+?/i';
+    $converted = preg_replace_callback($pattern, function (array $match) use ($rates): string {
+        $currency = strtoupper($match[1]);
+        $rate = (float)($rates[$currency] ?? 0);
+        if ($rate <= 0) { return $match[0]; }
+
+        $amountText = (string)$match[2];
+        preg_match_all('/[0-9][0-9,]*(?:\.[0-9]+)?/', $amountText, $amounts);
+        $values = array_map(fn($amount) => (float)str_replace(',', '', $amount), $amounts[0] ?? []);
+        if (!$values) { return $match[0]; }
+
+        $hasPlus = str_contains($match[0], '+');
+        if (str_contains($amountText, '/')) {
+            $birr = implode(' / ', array_map(fn($value) => vm_format_birr_amount($value * $rate), $values)) . ($hasPlus ? '+' : '');
+        } elseif (str_contains($amountText, '-') && count($values) >= 2) {
+            $birr = vm_format_birr_amount($values[0] * $rate) . '-' . vm_format_birr_amount($values[1] * $rate) . ($hasPlus ? '+' : '');
+        } else {
+            $birr = vm_format_birr_amount($values[0] * $rate) . ($hasPlus ? '+' : '');
+        }
+
+        return 'about ' . $birr . ' (' . trim($match[0]) . ')';
+    }, $fee);
+
+    return $converted ?? $fee;
 }
 
 function vm_public_visa_type_row(string $slug, string $hub, string $typeSlug): array

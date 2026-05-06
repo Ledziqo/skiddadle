@@ -47,11 +47,11 @@ $status = (string)($resource['resource_status'] ?? '');
 $resourceUrl = vm_resource_url($resource);
 $officialPage = (string)($resource['official_page'] ?? $resource['url'] ?? '#');
 $feeGuide = vm_fee_guide_for_country($countrySlug, (string)($country['hub'] ?? ''));
-$feeRows = array_slice(vm_public_visa_type_rows($countrySlug, (string)($country['hub'] ?? '')), 0, 5);
+$feeRows = vm_public_visa_type_rows_for_resource($resource, (string)($country['hub'] ?? ''), 5);
 $feeSourceUrl = (string)($feeGuide['fee_source_url'] ?? '');
 $contactCards = vm_contact_map_cards($countrySlug, $resources, $country);
-$requirements = array_slice((array)($matchedVisa['requirements'] ?? []), 0, 10);
-$documents = array_slice((array)($matchedVisa['documents_needed'] ?? []), 0, 10);
+$requirements = array_slice((array)($matchedVisa['requirements'] ?? []), 0, 14);
+$documents = array_slice((array)($matchedVisa['documents_needed'] ?? []), 0, 14);
 $steps = (array)($matchedVisa['application_steps'] ?? []);
 $refusals = array_slice((array)($matchedVisa['common_reasons_for_refusal'] ?? []), 0, 8);
 $financial = (array)($matchedVisa['financial_requirements'] ?? []);
@@ -123,7 +123,8 @@ if (!$validity) {
     ];
 }
 if ($visaFee === '') {
-    $visaFee = (string)($feeGuide['source_note'] ?? 'Check the official fee page before paying. Fees can change by route, duration, exchange rate and service centre.');
+    $primaryFeeRow = $feeRows[0] ?? null;
+    $visaFee = $primaryFeeRow ? ((string)$primaryFeeRow['type'] . ': ' . vm_fee_display((string)$primaryFeeRow['fee'])) : (string)($feeGuide['source_note'] ?? 'Check the official fee page before paying. Fees can change by route, duration, exchange rate and service centre.');
 }
 if ($processing === '') {
     $processing = 'Check the official source and appointment availability. Processing time and appointment availability are separate.';
@@ -171,7 +172,8 @@ vm_page_start($guideTitle . ' Guide');
       <section class="resource-guide-card">
         <h2>Prices and fee checks</h2>
         <?php if ($feeRows): ?>
-          <ul><?php foreach ($feeRows as $row): ?><li><strong><?= vm_h($row['type']) ?>:</strong> <?= vm_h($row['fee']) ?></li><?php endforeach; ?></ul>
+          <ul><?php foreach ($feeRows as $row): ?><li><strong><?= vm_h($row['type']) ?>:</strong> <?= vm_h(vm_fee_display((string)$row['fee'])) ?></li><?php endforeach; ?></ul>
+          <p class="fee-note">Birr amounts are approximate planning conversions; pay using the official currency and fee page.</p>
         <?php else: ?>
           <p>Use the official fee page or official source before paying. Do not rely on old screenshots, agent quotes or copied fee tables.</p>
         <?php endif; ?>

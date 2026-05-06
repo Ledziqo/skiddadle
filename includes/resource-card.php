@@ -8,7 +8,7 @@ $resourceSlug = (string)($resource['slug'] ?? '');
 $resourceCountry = $resourceSlug !== '' ? vm_country_by_slug($resourceSlug) : null;
 $resourceHub = (string)($resourceCountry['hub'] ?? '');
 $feeGuide = $resourceSlug !== '' ? vm_fee_guide_for_country($resourceSlug, $resourceHub) : [];
-$feeRows = array_slice(vm_public_visa_type_rows($resourceSlug, $resourceHub), 0, 4);
+$feeRows = vm_public_visa_type_rows_for_resource($resource, $resourceHub, 4);
 $contactCards = (function_exists('vm_contact_map_cards') && $resourceSlug !== '' && $resourceCountry) ? vm_contact_map_cards($resourceSlug, vm_country_resources($resourceSlug), $resourceCountry) : [];
 $primaryContact = $contactCards[0] ?? null;
 $typeSlug = vm_slugify((string)($resource['visa_type'] ?? 'visa-type'));
@@ -27,6 +27,9 @@ $basketPayload = [
   <h3><a href="<?= vm_h($detailUrl) ?>"><?= vm_h($resource['title'] ?? 'Official resource') ?></a></h3>
   <p class="muted"><?= vm_h($resource['visa_type'] ?? 'Visa resource') ?> · <?= vm_h(ucwords(str_replace('_', ' ', (string)($resource['category'] ?? 'resource')))) ?></p>
   <p><?= vm_h($resource['notes'] ?? '') ?></p>
+  <?php if ($feeRows): $primaryFee = $feeRows[0]; ?>
+    <p class="fee-preview"><strong>Fee idea:</strong> <?= vm_h($primaryFee['type']) ?> - <?= vm_h(vm_fee_display((string)$primaryFee['fee'])) ?></p>
+  <?php endif; ?>
   <dl class="mini-list">
     <div><dt>Source</dt><dd><?= vm_h($resource['source_org'] ?? 'Official source') ?></dd></div>
     <div><dt>Status</dt><dd><?= vm_h(vm_status_label($status)) ?></dd></div>
@@ -37,7 +40,8 @@ $basketPayload = [
       <section>
         <h4>Visa prices</h4>
         <?php if ($feeRows): ?>
-          <ul><?php foreach ($feeRows as $row): ?><li><strong><?= vm_h($row['type']) ?>:</strong> <?= vm_h($row['fee']) ?></li><?php endforeach; ?></ul>
+          <ul><?php foreach ($feeRows as $row): ?><li><strong><?= vm_h($row['type']) ?>:</strong> <?= vm_h(vm_fee_display((string)$row['fee'])) ?></li><?php endforeach; ?></ul>
+          <p class="fee-note">Birr amounts are approximate planning conversions; pay using the official currency and fee page.</p>
         <?php else: ?>
           <p>Check the official fee page for this country and visa type before paying.</p>
         <?php endif; ?>

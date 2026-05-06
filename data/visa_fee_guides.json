@@ -2,89 +2,1439 @@
   "defaults": {
     "source_note": "Fees can change by nationality, visa subtype, entry count, appointment center, exchange rate, service fee and courier/SMS choices. Always verify on the official fee page before paying.",
     "types": [
-      {"type": "Tourist / visitor", "fee": "Check official fee page", "what_to_prepare": "Purpose, itinerary, accommodation, funding, return ties."},
-      {"type": "Business", "fee": "Check official fee page", "what_to_prepare": "Invitation, meeting agenda, Ethiopian employer/business proof, funding."},
-      {"type": "Student", "fee": "Check official fee page", "what_to_prepare": "Admission, tuition/payment proof, study plan, funding, accommodation."},
-      {"type": "Medical", "fee": "Check official fee page", "what_to_prepare": "Hospital/treatment letter, cost estimate, medical history, funding, companion proof if needed."},
-      {"type": "Work", "fee": "Check official fee page", "what_to_prepare": "Work permit/approval, employer invitation, contract, qualifications."}
+      {
+        "type": "Tourist / visitor",
+        "fee": "Check official fee page",
+        "what_to_prepare": "Purpose, itinerary, accommodation, funding, return ties."
+      },
+      {
+        "type": "Business",
+        "fee": "Check official fee page",
+        "what_to_prepare": "Invitation, meeting agenda, Ethiopian employer/business proof, funding."
+      },
+      {
+        "type": "Student",
+        "fee": "Check official fee page",
+        "what_to_prepare": "Admission, tuition/payment proof, study plan, funding, accommodation."
+      },
+      {
+        "type": "Medical",
+        "fee": "Check official fee page",
+        "what_to_prepare": "Hospital/treatment letter, cost estimate, medical history, funding, companion proof if needed."
+      },
+      {
+        "type": "Work",
+        "fee": "Check official fee page",
+        "what_to_prepare": "Work permit/approval, employer invitation, contract, qualifications."
+      }
     ]
   },
   "schengen": {
     "fee_source_url": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/applying-schengen-visa_en",
     "source_note": "European Commission short-stay Schengen fee: EUR 90 adults, EUR 45 children aged 6 to under 12; service-center fees may also apply. Long-stay/national visas use country rules.",
     "types": [
-      {"type": "Tourist short-stay", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Schengen form, passport, photo, travel insurance, itinerary, accommodation, funds, Ethiopia return ties."},
-      {"type": "Family or friend visit", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Host invitation/accommodation, host ID/status, relationship proof, funds, insurance, ties."},
-      {"type": "Business short-stay", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Business invitation, employer/company letter, meeting agenda, funds, insurance, accommodation."},
-      {"type": "Medical short-stay", "fee": "EUR 90 adult / EUR 45 child 6-11", "what_to_prepare": "Treatment letter, appointment, cost estimate, medical history, funds, accommodation."},
-      {"type": "Student / long-stay", "fee": "Country-specific national visa fee", "what_to_prepare": "Admission, funding, accommodation, insurance and national visa checklist from the embassy."}
+      {
+        "type": "Tourist short-stay",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Schengen form, passport, photo, travel insurance, itinerary, accommodation, funds, Ethiopia return ties."
+      },
+      {
+        "type": "Family or friend visit",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Host invitation/accommodation, host ID/status, relationship proof, funds, insurance, ties."
+      },
+      {
+        "type": "Business short-stay",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Business invitation, employer/company letter, meeting agenda, funds, insurance, accommodation."
+      },
+      {
+        "type": "Medical short-stay",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Treatment letter, appointment, cost estimate, medical history, funds, accommodation."
+      },
+      {
+        "type": "Student / long-stay",
+        "fee": "Country-specific national visa fee; estimate EUR 50-100+ for many national routes",
+        "what_to_prepare": "Admission, funding, accommodation, insurance and national visa checklist from the embassy."
+      },
+      {
+        "type": "Work / national visa",
+        "fee": "Country-specific national visa fee; estimate EUR 75-120+ for many routes",
+        "what_to_prepare": "Work approval/contract, qualifications, insurance and national checklist."
+      }
     ]
   },
   "united-kingdom": {
-    "fee_source_url": "https://www.gov.uk/visa-fees",
-    "source_note": "Use GOV.UK visa-fees tool for current exact amount. UK fees depend on visa route, length and where you apply.",
+    "fee_source_url": "https://visa-fees.homeoffice.gov.uk/y/ethiopia/etb",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Business visits and private medical treatment are subcategories of Standard Visitor, longer medical stay may use 11-month medical visitor fee shown by GOV.UK fee tool. Workbook confidence: High. Permitted business activities only; no employment in UK. Workbook confidence: High. Private medical treatment needs medical evidence and funds. Workbook confidence: High. CAS required; IHS fee depends on course duration. Use these amounts for planning only and verify the official source before paying.",
     "types": [
-      {"type": "Standard Visitor", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Purpose, trip cost, accommodation, funds, employment/business/student proof, return ties."},
-      {"type": "Business visitor", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Meeting/event invitation, employer letter, company proof, travel costs and return ties."},
-      {"type": "Student", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "CAS/admission, funds, English/academic documents, TB/health requirements if applicable."},
-      {"type": "Medical visitor", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Private treatment letter, cost estimate, proof of funds, accommodation and return plan."},
-      {"type": "Work", "fee": "Check GOV.UK visa-fees tool", "what_to_prepare": "Certificate of sponsorship, job route, funds, qualifications and supporting documents."}
+      {
+        "type": "Tourist / visitor",
+        "fee": "ETB 29,783 standard visitor up to 6 months",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "ETB 29,783 standard visitor up to 6 months",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "ETB 29,783 standard visitor up to 6 months; 11-month private medical treatment visitor fee shown separately in GOV.UK fee tool",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "ETB 115,491 Student visa application fee outside UK",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
     ]
   },
   "united-states": {
-    "fee_source_url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-reciprocity-tables.html",
-    "source_note": "Use U.S. Department of State fee and reciprocity tables. Visa application fee and any issuance/reciprocity fee depend on visa class and nationality.",
+    "fee_source_url": "https://travel.state.gov/content/travel/en/us-visas/visa-information-resources/fees/fees-visa-services.html",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. B-1 business, B-2 tourism/medical are same MRV class fee. Workbook confidence: High. Business meetings/conferences only; no U.S. employment. Workbook confidence: High. Need diagnosis, U.S. doctor/hospital letter, cost estimate, proof of funds. Workbook confidence: High. I-20/DS-2019 required before DS-160/interview. Use these amounts for planning only and verify the official source before paying.",
     "types": [
-      {"type": "B1/B2 tourist/business/medical", "fee": "Check State Department MRV fee table", "what_to_prepare": "DS-160, appointment, purpose, interview story, funds and Ethiopia ties."},
-      {"type": "F/M student", "fee": "Check State Department + SEVIS fee rules", "what_to_prepare": "I-20/DS-2019, SEVIS receipt if required, school admission, funds, study plan."},
-      {"type": "Work visa", "fee": "Check State Department fee table", "what_to_prepare": "Petition/approval where required, employer documents, qualifications and interview support."},
-      {"type": "Medical treatment", "fee": "Usually B2 category; check official fee table", "what_to_prepare": "Doctor/treatment letter, cost estimate, ability to pay, return plan."}
+      {
+        "type": "Tourist / visitor",
+        "fee": "US$185 MRV fee for B-2/B-1/B-2",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "US$185 MRV fee for B-1/B-2",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "US$185 MRV fee for B-2 medical treatment",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "US$185 MRV fee for F/M/J non-petition visas",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
     ]
   },
   "canada": {
     "fee_source_url": "https://ircc.canada.ca/english/information/fees/fees.asp",
-    "source_note": "IRCC fee list shows visitor visa CAD 100 per person, study permit CAD 150, work permit CAD 155, biometrics CAD 85 per person where required. Verify before paying.",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Business visitors and medical visitors usually apply as TRV visitors with purpose documents. Workbook confidence: High. Invitation, event details, employer/company proof required. Workbook confidence: High. May need upfront/official medical exam depending circumstances. Workbook confidence: High. LOA + PAL/TAL if required, proof of funds and tuition. Use these amounts for planning only and verify the official source before paying.",
     "types": [
-      {"type": "Visitor / TRV", "fee": "CAD 100 per person; biometrics CAD 85 if required", "what_to_prepare": "IRCC account, purpose, invitation if any, funds, travel history, ties."},
-      {"type": "Student / study permit", "fee": "CAD 150; biometrics CAD 85 if required", "what_to_prepare": "Letter of acceptance, tuition/funds, study plan, family ties, forms."},
-      {"type": "Work permit", "fee": "CAD 155; open work permit holder fee may add CAD 100; biometrics if required", "what_to_prepare": "Job offer/LMIA/exemption proof, employer documents, qualifications."},
-      {"type": "Business visitor", "fee": "Usually visitor/TRV fee; verify IRCC route", "what_to_prepare": "Invitation, meeting plan, Ethiopian company letter, funds and ties."},
-      {"type": "Medical visit", "fee": "Usually visitor/TRV fee; verify IRCC route", "what_to_prepare": "Treatment letter, cost estimate, funds and return plan."}
+      {
+        "type": "Tourist / visitor",
+        "fee": "CAD 100 visitor visa/TRV",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "CAD 100 visitor visa/TRV",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "CAD 100 visitor visa/TRV",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "CAD 150 study permit",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
     ]
   },
   "china": {
-    "fee_source_url": "https://www.visaforchina.cn/ADD3_EN/qianzhengyewu/jichuzhishi/changjianwenti",
-    "source_note": "China fees depend on nationality, entry count and visa-center service option. Addis Ababa center publishes schedule/service notices; service fee notices mention ordinary/express/urgent service fee levels.",
+    "fee_source_url": "https://et.china-embassy.gov.cn/eng/lsxx_1/hzqz/202512/t20251225_11787085.htm",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Same visa fee table applies by entries; L tourist uses invitation/itinerary/hotel. Workbook confidence: High. M/F visa requires China invitation/business docs. Workbook confidence: Medium. China does not always label a separate 'medical visa' in the same way; purpose may be short-stay visa with medical docs. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: High. X1/X2 requires school admission and visa application documents. Use these amounts for planning only and verify the official source before paying.",
     "types": [
-      {"type": "Tourist L", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Itinerary, hotel/host proof, passport, photo, online form and appointment materials."},
-      {"type": "Business M", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Chinese company invitation, Ethiopian company proof, trip purpose and dates."},
-      {"type": "Student X1/X2", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Admission notice, JW form where applicable, study plan and funding."},
-      {"type": "Work Z", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Work permit notification, employer documents, qualifications and medical/police documents if required."},
-      {"type": "Family Q/S", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Invitation, inviter ID/status, relationship proof and visit/residence purpose."},
-      {"type": "Medical", "fee": "Check Addis Ababa Visa for China fee schedule", "what_to_prepare": "Hospital invitation/treatment proof, cost/funding and accommodation plan."}
+      {
+        "type": "Tourist / visitor",
+        "fee": "ETB 2,980 single / 4,360 double / 5,850 6-month multiple / 8,830 12-month+ multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "ETB 2,980 single / 4,360 double / 5,850 6-month multiple / 8,830 12-month+ multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: ETB 2,980 single / ETB 4,360 double / ETB 5,850 6-month multiple / ETB 8,830 12-month+ multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Same fee by entry count; usually X1/X2 visa based on study duration",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
     ]
   },
   "india": {
-    "fee_source_url": "https://indianvisaonline.gov.in/evisa/images/eTV_revised_fee_final.pdf",
-    "source_note": "India eVisa fees vary by nationality and eVisa type. The official country-wise eVisa fee table lists business/medical/conference-style categories; confirm Ethiopia row and route before paying.",
+    "fee_source_url": "https://eoiaddisababa.gov.in/visa-passport-consular-fee/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Use current Embassy Addis fee PDF; eVisa availability should be separately checked for Ethiopian passport. Workbook confidence: High. Business visa is gratis for LDC applicants per Embassy PDF/fee notice; invitation and business docs required. Workbook confidence: High. Medical attendant visa uses same fee class. Workbook confidence: High. Validity duration of course or 5 years, whichever is less. Use these amounts for planning only and verify the official source before paying.",
     "types": [
-      {"type": "Tourist eVisa / tourist", "fee": "Check Indian official eVisa fee table", "what_to_prepare": "Passport, photo, purpose, itinerary, accommodation and funds."},
-      {"type": "Business", "fee": "Check Indian official eVisa fee table", "what_to_prepare": "Business card/company letter, Indian invitation, meeting purpose and funds."},
-      {"type": "Medical", "fee": "Check Indian official eVisa fee table", "what_to_prepare": "Hospital letter, appointment/treatment plan, cost estimate and attendant proof if needed."},
-      {"type": "Student", "fee": "Check Indian official/embassy route", "what_to_prepare": "Admission, fees/funding, accommodation and academic documents."}
+      {
+        "type": "Tourist / visitor",
+        "fee": "US$100 up to 1 year / US$200 more than 1 to 5 years + US$3 ICWF, unless eVisa/reciprocity changes apply",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Gratis visa fee for Ethiopian/LDC applicants; US$3 ICWF still charged (or ETB equivalent e.g., 480 ETB previously posted)",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "US$80 up to 6 months / US$120 more than 6 months to 1 year + US$3 ICWF",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "US$80 student visa + US$3 ICWF",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
     ]
   },
-  "united-arab-emirates": {"fee_source_url": "", "source_note": "UAE fees depend heavily on sponsor/airline/hotel/government channel and visa duration. Verify the approved channel before paying."},
-  "saudi-arabia": {"fee_source_url": "", "source_note": "Saudi fees depend on official portal route, purpose and insurance/service components. Verify through official Saudi route before paying."},
-  "turkey": {"fee_source_url": "", "source_note": "Turkey fees depend on eVisa/sticker visa route and nationality. Verify on official Turkish visa/pre-application source before paying."},
-  "thailand": {"fee_source_url": "", "source_note": "Thailand fees depend on visa type, embassy route and current consular fee schedule. Verify on official Thai source before paying."},
-  "south-africa": {"fee_source_url": "", "source_note": "South Africa fees depend on visa type and local mission/VFS route. Verify with official embassy/VFS source before paying."},
-  "kenya": {"fee_source_url": "", "source_note": "Kenya eTA/visa-related fees depend on official portal route and nationality. Verify on the official Kenya portal before paying."},
-  "qatar": {"fee_source_url": "", "source_note": "Qatar fees depend on sponsor, airline/hotel/portal route and nationality. Verify on official Qatar route before paying."},
-  "egypt": {"fee_source_url": "", "source_note": "Egypt fees depend on consular/eVisa route, nationality and visa type. Verify on official embassy/portal source before paying."},
-  "japan": {"fee_source_url": "", "source_note": "Japan visa fees can depend on nationality and entry count; some categories may be exempt. Verify with Embassy of Japan official instructions."},
-  "south-korea": {"fee_source_url": "", "source_note": "Korea fees depend on visa type, entries and embassy/portal route. Verify on Korea Visa Portal or embassy source."},
-  "malaysia": {"fee_source_url": "", "source_note": "Malaysia fees depend on eVisa/embassy route, nationality and visa type. Verify on official Malaysia source."},
-  "australia": {"fee_source_url": "", "source_note": "Australia fees depend on subclass. Verify through official ImmiAccount/Department of Home Affairs fee tools."},
-  "russia": {"fee_source_url": "", "source_note": "Russia fees depend on visa type, entry count, processing speed and consular route. Verify with official embassy/consular source."}
+  "united-arab-emirates": {
+    "fee_source_url": "https://u.ae/en/information-and-services/visa-and-emirates-id/tourist-visa",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium-High. Tourist visas often applied by UAE airline, hotel, tour agency, or ICP/GDRFA channel; not a simple embassy sticker. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Use ICP/GDRFA; exact total often appears after choosing service/sponsor and duration. Short-term visit/business entry permits vary by ICP/GDRFA emirate, duration, and sponsor; use this range before portal quote. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Usually sponsored by UAE medical facility or local sponsor. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. University normally sponsors student residence process. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: AED 300-600",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: AED 300-700",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: AED 1,000-3,000+",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "saudi-arabia": {
+    "fee_source_url": "https://visa.mofa.gov.sa/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. For Ethiopian ordinary passport, verify eligibility in MOFA/Visit Saudi portal. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Invitation/referral from Saudi company/MOFA usually required. Workbook confidence: Medium. Requires Saudi medical facility acceptance/referral. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Scholarship/admission/referral required. Some Saudi student/government-study visa schedules show no visa fee; budget a small consular/service margin until embassy confirms. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: SAR 535 tourist eVisa/visitor estimate including insurance, where eligible",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Official MOFA fee schedule example lists Business Visit at SAR 300; actual Addis/Enjaz total may include insurance/service",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: SAR 300-700",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "ETB 0 / fee-exempt or gratis route",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "turkey": {
+    "fee_source_url": "https://www.evisa.gov.tr/en/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Ethiopians may have conditional eVisa rules; verify by passport + travel document in official portal. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopians may have conditional eVisa rules; verify by passport + travel document in official portal. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopians may have conditional eVisa rules; verify by passport + travel document in official portal. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopians may have conditional eVisa rules; verify by passport + travel document in official portal. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$60-120",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$60-180",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$60-180",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$100-250 + residence permit/card costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "thailand": {
+    "fee_source_url": "https://www.thaievisa.go.th/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Tourist, business, medical, student categories available; fee shown at application stage. Thai tourist/eVOA fee commonly appears around THB 2,000; exact mission/eVisa portal amount can differ. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist, business, medical, student categories available; fee shown at application stage. Business applicants should attach host invitation and sending company letter. Non-Immigrant B fees vary by single/multiple entry and consular currency; use single-entry planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist, business, medical, student categories available; fee shown at application stage. Medical applicants should attach hospital appointment and treatment cost estimate. Medical travel may use tourist/MT/non-immigrant routes depending case; estimate covers common single-entry visa ranges. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist, business, medical, student categories available; fee shown at application stage. Student applicants need admission/acceptance and may need residence permit after arrival. Non-Immigrant ED/student visa fees vary by consulate and entry count. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: THB 2,000 / US$55-60",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$80-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$40-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$80-200",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "south-africa": {
+    "fee_source_url": "https://www.gov.za/services/temporary-residence/visa",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Visitor visa for tourism/business up to 90 days. Workbook confidence: High. Invitation and employer letters required. Workbook confidence: High. Medical report and South African practitioner/hospital letter required. Workbook confidence: High. Acceptance letter, medical/radiological reports, police certificates, guardian/medical cover as required. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "US$36 port of entry/visitor visa fee in official schedule example",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "US$36 visa to attend business meetings 90 days or less in official schedule example",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "US$36 medical visa fee in official schedule example",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "US$36 study visa fee in official schedule example",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "kenya": {
+    "fee_source_url": "https://www.etakenya.go.ke",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. eTA mandatory for foreign visitors except EAC states; Ethiopia is in fee-exempt list. Workbook confidence: High. Business extra: invitation letter + company registration copy. Workbook confidence: High. Medical extra: referral/appointment letter from doctor/hospital. Workbook confidence: Medium. For study beyond visit, contact institution/immigration for student pass. Student pass/pupil pass and immigration fees depend on institution and permit/pass type; eTA may also apply depending eligibility. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "ETB 0 / fee-exempt or gratis route",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "ETB 0 / fee-exempt or gratis route",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "ETB 0 / fee-exempt or gratis route",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "ETB 0 / fee-exempt or gratis route",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "qatar": {
+    "fee_source_url": "https://visitqatar.com/intl-en/practical-info/visas",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Visa type and fee depends on nationality/host/hotel/hayya route. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Visa type and fee depends on nationality/host/hotel/hayya route. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Visa type and fee depends on nationality/host/hotel/hayya route. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Visa type and fee depends on nationality/host/hotel/hayya route. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: QAR 100",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: QAR 100-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: QAR 100-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: QAR 100-500+ excluding residence/medical/ID costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "egypt": {
+    "fee_source_url": "https://www.visa2egypt.gov.eg/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium-Low. Many Ethiopians apply through Egyptian Embassy rather than eVisa; verify in portal. Use Egypt eVisa-style tourist fee as planning benchmark where portal/embassy route applies; business/medical may be embassy-specific. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Many Ethiopians apply through Egyptian Embassy rather than eVisa; verify in portal. Business applicants should attach host invitation and sending company letter. Use Egypt eVisa-style tourist fee as planning benchmark where portal/embassy route applies; business/medical may be embassy-specific. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Many Ethiopians apply through Egyptian Embassy rather than eVisa; verify in portal. Medical applicants should attach hospital appointment and treatment cost estimate. Use Egypt eVisa-style tourist fee as planning benchmark where portal/embassy route applies; business/medical may be embassy-specific. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Many Ethiopians apply through Egyptian Embassy rather than eVisa; verify in portal. Student applicants need admission/acceptance and may need residence permit after arrival. Budget entry visa plus post-arrival student residence processing; embassy/university process can differ. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$30 single / US$65 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$30 single / US$65 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$30 single / US$65 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$30-100 + residence fees",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "japan": {
+    "fee_source_url": "https://www.mofa.go.jp/j_info/visit/visa/procedure/fee.html",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Some nationalities exempt/reduced; verify at Embassy. Workbook confidence: High. Invitation/guarantee/company documents from Japan required. Workbook confidence: Medium-High. Japan has medical stay visa scheme for longer treatments; requirements specific. Workbook confidence: High. COE issued by Japan immigration is key prerequisite. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "General Japan visa fee: JPY 3,000 single-entry / JPY 6,000 double or multiple; paid only if issued",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "JPY 3,000 single-entry / JPY 6,000 double or multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "JPY 3,000 single-entry / JPY 6,000 double or multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "JPY 3,000 single-entry visa after Certificate of Eligibility; fee paid if issued",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "south-korea": {
+    "fee_source_url": "https://www.visa.go.kr/openPage.do?LANG_TYPE=EN&MENU_ID=10105",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Fee may vary by nationality/reciprocity; use visa.go.kr/current embassy page. Workbook confidence: High. Invitation/company registration from Korea required. Workbook confidence: Medium. May use C-3-3 medical tourism or other category depending treatment. Workbook confidence: High. Certificate of admission and school business registration required. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "US$40 single entry up to 90 days; US$60 single over 90 days; US$70 double; US$90 multiple (general Korea fee table)",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "US$40 single up to 90 days; multiple/double higher as above",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "US$40 single up to 90 days; higher for longer/multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Usually US$60 for over-90-day single-entry D-2/D-4 or fee per Korea table",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "malaysia": {
+    "fee_source_url": "https://www.kln.gov.my/web/eth_addis-ababa/for-foreigners",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Student/medical usually Visa With Reference/approval from immigration or institution. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Student/medical usually Visa With Reference/approval from immigration or institution. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Student/medical usually Visa With Reference/approval from immigration or institution. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Student/medical usually Visa With Reference/approval from immigration or institution. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: MYR 50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: MYR 50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: MYR 50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: MYR 300-1,500+ including student-pass/eVAL/EMGS-style charges",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "australia": {
+    "fee_source_url": "https://immi.homeaffairs.gov.au/visas/visa-pricing-estimator",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Business visitor and tourist are streams of subclass 600. Subclass 600 visitor/business stream base charge changes periodically; confirm the final amount on the official Australian fee page before applying. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. For meetings/conferences only, no work. Subclass 600 visitor/business stream base charge changes periodically; confirm the final amount on the official Australian fee page before applying. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Separate subclass 602 for medical treatment/consultation. Subclass 602 Medical Treatment visa is often nil in many cases, but some circumstances/extra costs can apply; confirm the final amount on the official Australian fee page. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. COE and Genuine Student requirement; financial capacity evidence. Student subclass 500 fee is high and periodically updated; confirm the final amount on the official Australian fee page before applying. | Use as an estimate only; confirm the live official fee before paying. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: AUD 200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: AUD 200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: AUD 0 government VAC; biometrics/health costs extra",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: AUD 2,000",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "russia": {
+    "fee_source_url": "https://ethiopia.mid.ru/en/consular-services/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Tourist/business/humanitarian/student categories handled by embassy/consular system. Consular fee depends on single/double/multiple entry, processing speed, and reciprocity; use this as embassy budget range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/humanitarian/student categories handled by embassy/consular system. Business applicants should attach host invitation and sending company letter. Consular fee depends on single/double/multiple entry, processing speed, and reciprocity; use this as embassy budget range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/humanitarian/student categories handled by embassy/consular system. Medical applicants should attach hospital appointment and treatment cost estimate. Consular fee depends on single/double/multiple entry, processing speed, and reciprocity; use this as embassy budget range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/humanitarian/student categories handled by embassy/consular system. Student applicants need admission/acceptance and may need residence permit after arrival. Student visa fee generally follows consular entry/processing fee structure; invitation/telex and service fees may be extra. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$40-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$40-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$40-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$40-160",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "uae": {
+    "fee_source_url": "https://u.ae/en/information-and-services/visa-and-emirates-id/visit-visas",
+    "source_note": "UAE visit fees vary by emirate, sponsor, airline/hotel/government channel, duration and insurance. Amounts below are planning estimates only; verify in the approved official channel before paying.",
+    "types": [
+      {
+        "type": "Tourist / visit visa",
+        "fee": "Estimate: AED 300-700+ depending on duration/sponsor; verify official UAE channel",
+        "what_to_prepare": "Sponsor/airline or portal route, passport, photo, accommodation, funds and travel plan."
+      },
+      {
+        "type": "Transit visa",
+        "fee": "Estimate: AED 50 for 48-hour / AED 150 for 96-hour route where available",
+        "what_to_prepare": "Confirmed onward ticket, passport and airline/airport channel instructions."
+      },
+      {
+        "type": "Business visit",
+        "fee": "Estimate: often same as visit visa route; verify sponsor/channel fee",
+        "what_to_prepare": "Invitation, meeting purpose, sponsor details, funds and itinerary."
+      },
+      {
+        "type": "Student",
+        "fee": "Estimate: residence/student entry permit and Emirates ID fees vary by sponsor/university",
+        "what_to_prepare": "Admission, sponsor/university documents, medical/ID requirements and funding."
+      },
+      {
+        "type": "Work",
+        "fee": "Estimate: employer-paid entry permit/residence costs vary by free zone/mainland route",
+        "what_to_prepare": "Employer permit, contract, medical test, Emirates ID and attestation requirements."
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimate: medical treatment entry permit varies by health authority/sponsor",
+        "what_to_prepare": "Hospital letter, treatment plan, cost estimate and sponsor/channel documents."
+      }
+    ]
+  },
+  "germany": {
+    "fee_source_url": "https://addis-abeba.diplo.de/et-en/service/visa-einreise/visa-and-entry-regulations-2566370",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "EUR 75 national student visa; Ethiopian cash equivalent set by Embassy",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "france": {
+    "fee_source_url": "https://france-visas.gouv.fr/en/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "EUR 99 long-stay student visa; Campus France/TLS service fees may apply",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "italy": {
+    "fee_source_url": "https://visa.vfsglobal.com/one-pager/italy/ethiopia/english/index.html",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Italy study/national visa fee is often EUR 50 for study; use EUR 50 as budget baseline, but local VFS/consulate may add service fees. | Use as an estimate only; confirm the live official fee before paying. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: EUR 50",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "netherlands": {
+    "fee_source_url": "https://www.netherlandsworldwide.nl/visa-the-netherlands",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. MVV/residence permit is normally IND category-based and often paid through the school/sponsor; use this as a student residence-fee budget range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: EUR 228-EUR 250",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "sweden": {
+    "fee_source_url": "https://www.migrationsverket.se/English/Private-individuals.html",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "SEK 1,500 residence permit for studies; no Schengen C for full degree",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "austria": {
+    "fee_source_url": "https://www.bmeia.gv.at/en/travel-stay/entry-and-residence-in-austria/visa",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. National D/residence/student route fees vary by consulate/residence permit stage; use EUR 150 as planning midpoint. | Use as an estimate only; confirm the live official fee before paying. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: EUR 150 + local service fees",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "belgium": {
+    "fee_source_url": "https://ethiopia.diplomatie.belgium.be/en/visa-belgium",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Long-stay D visa EUR 180 + possible administrative contribution; TLS fee may apply",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "schengen-area": {
+    "fee_source_url": "https://home-affairs.ec.europa.eu/policies/schengen-borders-and-visa/visa-policy/applying-schengen-visa_en",
+    "source_note": "European Commission short-stay Schengen fee: EUR 90 adults, EUR 45 children aged 6 to under 12; service-center fees may also apply. Long-stay/national visas use country rules.",
+    "types": [
+      {
+        "type": "Tourist short-stay",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Schengen form, passport, photo, travel insurance, itinerary, accommodation, funds, Ethiopia return ties."
+      },
+      {
+        "type": "Family or friend visit",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Host invitation/accommodation, host ID/status, relationship proof, funds, insurance, ties."
+      },
+      {
+        "type": "Business short-stay",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Business invitation, employer/company letter, meeting agenda, funds, insurance, accommodation."
+      },
+      {
+        "type": "Medical short-stay",
+        "fee": "EUR 90 adult / EUR 45 child 6-11; VFS/TLS service fee may apply",
+        "what_to_prepare": "Treatment letter, appointment, cost estimate, medical history, funds, accommodation."
+      },
+      {
+        "type": "Student / long-stay",
+        "fee": "Country-specific national visa fee; estimate EUR 50-100+ for many national routes",
+        "what_to_prepare": "Admission, funding, accommodation, insurance and national visa checklist from the embassy."
+      },
+      {
+        "type": "Work / national visa",
+        "fee": "Country-specific national visa fee; estimate EUR 75-120+ for many routes",
+        "what_to_prepare": "Work approval/contract, qualifications, insurance and national checklist."
+      }
+    ]
+  },
+  "oman": {
+    "fee_source_url": "https://evisa.rop.gov.om/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Business/medical/student often require sponsor/institution/residence process. Oman eVisa/visit classes often price by duration/sponsor; OMR 20 is common tourist baseline, business/medical can be higher. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Business/medical/student often require sponsor/institution/residence process. Business applicants should attach host invitation and sending company letter. Oman eVisa/visit classes often price by duration/sponsor; OMR 20 is common tourist baseline, business/medical can be higher. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Business/medical/student often require sponsor/institution/residence process. Medical applicants should attach hospital appointment and treatment cost estimate. Oman eVisa/visit classes often price by duration/sponsor; OMR 20 is common tourist baseline, business/medical can be higher. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Business/medical/student often require sponsor/institution/residence process. Student applicants need admission/acceptance and may need residence permit after arrival. Student/residence route is sponsor/institution-linked; budget visa plus residence-card/medical costs. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: OMR 20-50",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: OMR 20-50",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: OMR 20-50",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: OMR 20-50 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "kuwait": {
+    "fee_source_url": "https://evisa.moi.gov.kw/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium-Low. Business/medical/student usually sponsor-based; verify MOI/embassy. Kuwait visit/eVisa fees are sponsor/nationality/category-specific; KWD 3 is common visit baseline but portal may add/alter fees. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Business/medical/student usually sponsor-based; verify MOI/embassy. Business applicants should attach host invitation and sending company letter. Kuwait visit/eVisa fees are sponsor/nationality/category-specific; KWD 3 is common visit baseline but portal may add/alter fees. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Business/medical/student usually sponsor-based; verify MOI/embassy. Medical applicants should attach hospital appointment and treatment cost estimate. Kuwait visit/eVisa fees are sponsor/nationality/category-specific; KWD 3 is common visit baseline but portal may add/alter fees. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Business/medical/student usually sponsor-based; verify MOI/embassy. Student applicants need admission/acceptance and may need residence permit after arrival. Student/residence processing is sponsor/institution-linked; exact fees not public for all nationalities. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: KWD 3-30",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: KWD 3-30",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: KWD 3-30",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: KWD 10-60 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "bahrain": {
+    "fee_source_url": "https://www.evisa.gov.bh/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Use eVisa eligibility checker for Ethiopian passport. Bahrain eVisa fee varies by visa type, stay length, and entry count; portal quote is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Use eVisa eligibility checker for Ethiopian passport. Business applicants should attach host invitation and sending company letter. Bahrain eVisa fee varies by visa type, stay length, and entry count; portal quote is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Use eVisa eligibility checker for Ethiopian passport. Medical applicants should attach hospital appointment and treatment cost estimate. Bahrain eVisa fee varies by visa type, stay length, and entry count; portal quote is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Use eVisa eligibility checker for Ethiopian passport. Student applicants need admission/acceptance and may need residence permit after arrival. Student route usually involves sponsor/institution and residence processing; portal/NPRA quote required. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: BHD 9-60",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: BHD 9-60",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: BHD 9-60",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: BHD 20-100 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "jordan": {
+    "fee_source_url": "https://eservices.moi.gov.jo/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Some nationalities require prior approval; business/medical use visit visa with purpose docs. Common Jordan visa-fee structure; route/nationality rules can change. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Some nationalities require prior approval; business/medical use visit visa with purpose docs. Business applicants should attach host invitation and sending company letter. Common Jordan visa-fee structure; route/nationality rules can change. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Some nationalities require prior approval; business/medical use visit visa with purpose docs. Medical applicants should attach hospital appointment and treatment cost estimate. Common Jordan visa-fee structure; route/nationality rules can change. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Some nationalities require prior approval; business/medical use visit visa with purpose docs. Student applicants need admission/acceptance and may need residence permit after arrival. Entry visa may follow normal fee structure; residence/student processing can add costs. | Use as an estimate only; confirm the live official fee before paying. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: JD 40 single / JD 60 double / JD 120 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: JD 40 single / JD 60 double / JD 120 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: JD 40 single / JD 60 double / JD 120 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: JD 40 single / JD 60 double / JD 120 multiple + residence/student permit costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "lebanon": {
+    "fee_source_url": "https://www.general-security.gov.lb/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Low-Medium. Prior visa/approval likely required; use embassy checklist. Common Lebanon consular fee structure; exact Addis/route fee should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low-Medium. Prior visa/approval likely required; use embassy checklist. Business applicants should attach host invitation and sending company letter. Common Lebanon consular fee structure; exact Addis/route fee should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low-Medium. Prior visa/approval likely required; use embassy checklist. Medical applicants should attach hospital appointment and treatment cost estimate. Common Lebanon consular fee structure; exact Addis/route fee should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low-Medium. Prior visa/approval likely required; use embassy checklist. Student applicants need admission/acceptance and may need residence permit after arrival. Entry visa plus post-arrival residence/student processing may apply. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$35 single / US$50 double / US$70 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$35 single / US$50 double / US$70 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$35 single / US$50 double / US$70 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$35-70 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "israel": {
+    "fee_source_url": "https://israel-entry.piba.gov.il/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Ethiopians normally need visa; security processing can be detailed. B/2 visitor/business/medical consular fee commonly sits around this range; embassy payment page is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopians normally need visa; security processing can be detailed. Business applicants should attach host invitation and sending company letter. B/2 visitor/business/medical consular fee commonly sits around this range; embassy payment page is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopians normally need visa; security processing can be detailed. Medical applicants should attach hospital appointment and treatment cost estimate. B/2 visitor/business/medical consular fee commonly sits around this range; embassy payment page is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopians normally need visa; security processing can be detailed. Student applicants need admission/acceptance and may need residence permit after arrival. A/2 student visa fee is usually higher than visitor class; exact embassy payment page is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: NIS 90-120",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: NIS 90-120",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: NIS 90-120",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: NIS 180-250",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "morocco": {
+    "fee_source_url": "https://www.acces-maroc.ma/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Tourist/business/medical/student require consular/eVisa depending eligibility. Morocco eVisa-style fees can differ by standard/express and eligibility; consular route may differ. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/medical/student require consular/eVisa depending eligibility. Business applicants should attach host invitation and sending company letter. Morocco eVisa-style fees can differ by standard/express and eligibility; consular route may differ. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/medical/student require consular/eVisa depending eligibility. Medical applicants should attach hospital appointment and treatment cost estimate. Morocco eVisa-style fees can differ by standard/express and eligibility; consular route may differ. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/medical/student require consular/eVisa depending eligibility. Student applicants need admission/acceptance and may need residence permit after arrival. Student/long-stay route may be consular; use this as budget range until consulate confirms. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: MAD 770-1,100 / US$75-110",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: MAD 770-1,100 / US$75-110",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: MAD 770-1,100 / US$75-110",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: MAD 330-770 / US$35-75",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "tunisia": {
+    "fee_source_url": "https://www.diplomatie.gov.tn/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Low-Medium. Tourist/business/medical/student usually consular visa; invitation or admission needed. Tunisia consular fees are embassy/nationality/entry-count specific; use this conservative planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low-Medium. Tourist/business/medical/student usually consular visa; invitation or admission needed. Business applicants should attach host invitation and sending company letter. Tunisia consular fees are embassy/nationality/entry-count specific; use this conservative planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low-Medium. Tourist/business/medical/student usually consular visa; invitation or admission needed. Medical applicants should attach hospital appointment and treatment cost estimate. Tunisia consular fees are embassy/nationality/entry-count specific; use this conservative planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low-Medium. Tourist/business/medical/student usually consular visa; invitation or admission needed. Student applicants need admission/acceptance and may need residence permit after arrival. Student entry/residence process can include local residence-card costs. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$30-100",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$30-100",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$30-100",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$30-100 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "djibouti": {
+    "fee_source_url": "https://www.evisa.gouv.dj/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Ethiopian passport may have regional arrangements; verify with Djibouti eVisa/embassy. Djibouti eVisa prices vary by stay length; short-stay is lower, 15-90 day visas higher. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopian passport may have regional arrangements; verify with Djibouti eVisa/embassy. Business applicants should attach host invitation and sending company letter. Djibouti eVisa prices vary by stay length; short-stay is lower, 15-90 day visas higher. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopian passport may have regional arrangements; verify with Djibouti eVisa/embassy. Medical applicants should attach hospital appointment and treatment cost estimate. Djibouti eVisa prices vary by stay length; short-stay is lower, 15-90 day visas higher. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Ethiopian passport may have regional arrangements; verify with Djibouti eVisa/embassy. Student applicants need admission/acceptance and may need residence permit after arrival. Entry visa plus residence/education formalities may apply. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$23-90",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$23-90",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$23-90",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$23-90 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "sudan": {
+    "fee_source_url": "https://mofa.gov.sd/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Low. Verify directly with Sudanese Embassy and current travel advisories. Embassy-only/unstable route; fee depends on nationality, entry count, and current diplomatic/security conditions. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low. Verify directly with Sudanese Embassy and current travel advisories. Business applicants should attach host invitation and sending company letter. Embassy-only/unstable route; fee depends on nationality, entry count, and current diplomatic/security conditions. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low. Verify directly with Sudanese Embassy and current travel advisories. Medical applicants should attach hospital appointment and treatment cost estimate. Embassy-only/unstable route; fee depends on nationality, entry count, and current diplomatic/security conditions. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low. Verify directly with Sudanese Embassy and current travel advisories. Student applicants need admission/acceptance and may need residence permit after arrival. Student/residence processes are likely separate and may require sponsor/university documents. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$50-150 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "south-sudan": {
+    "fee_source_url": "https://eservices.gov.ss/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium-Low. Business/student/medical require invitation/sponsor/admission/hospital letters. eVisa/embassy fees vary by nationality, category and entry count; portal/embassy quote is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Business/student/medical require invitation/sponsor/admission/hospital letters. Business applicants should attach host invitation and sending company letter. eVisa/embassy fees vary by nationality, category and entry count; portal/embassy quote is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Business/student/medical require invitation/sponsor/admission/hospital letters. Medical applicants should attach hospital appointment and treatment cost estimate. eVisa/embassy fees vary by nationality, category and entry count; portal/embassy quote is final. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Business/student/medical require invitation/sponsor/admission/hospital letters. Student applicants need admission/acceptance and may need residence permit after arrival. Entry visa plus education/residence procedures may apply. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$50-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$50-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$50-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$50-160 + residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "uganda": {
+    "fee_source_url": "https://visas.immigration.go.ug/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High-Medium. Business/medical can use ordinary visa with purpose docs; student pass/residence fees differ. Workbook confidence: High-Medium. Business/medical can use ordinary visa with purpose docs; student pass/residence fees differ. Business applicants should attach host invitation and sending company letter. Workbook confidence: High-Medium. Business/medical can use ordinary visa with purpose docs; student pass/residence fees differ. Medical applicants should attach hospital appointment and treatment cost estimate. Workbook confidence: High-Medium. Business/medical can use ordinary visa with purpose docs; student pass/residence fees differ. Student applicants need admission/acceptance and may need residence permit after arrival. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Uganda ordinary single-entry eVisa generally US$50; East Africa Tourist Visa US$100 where applicable",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Uganda ordinary single-entry eVisa generally US$50; East Africa Tourist Visa US$100 where applicable",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Uganda ordinary single-entry eVisa generally US$50; East Africa Tourist Visa US$100 where applicable",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Uganda ordinary single-entry eVisa generally US$50; East Africa Tourist Visa US$100 where applicable",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "tanzania": {
+    "fee_source_url": "https://visa.immigration.go.tz/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High-Medium. Medical can be ordinary visa with medical docs; student permit/pass via immigration/institution. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: High-Medium. Medical can be ordinary visa with medical docs; student permit/pass via immigration/institution. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: High-Medium. Medical can be ordinary visa with medical docs; student permit/pass via immigration/institution. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: High-Medium. Medical can be ordinary visa with medical docs; student permit/pass via immigration/institution. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "rwanda": {
+    "fee_source_url": "https://irembo.gov.rw/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Student pass/residence handled after admission; official Irembo fee depends category. Single-entry visitor/entry visa commonly used as baseline; conference/business categories can vary. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Student pass/residence handled after admission; official Irembo fee depends category. Business applicants should attach host invitation and sending company letter. Single-entry visitor/entry visa commonly used as baseline; conference/business categories can vary. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Student pass/residence handled after admission; official Irembo fee depends category. Medical applicants should attach hospital appointment and treatment cost estimate. Single-entry visitor/entry visa commonly used as baseline; conference/business categories can vary. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Student pass/residence handled after admission; official Irembo fee depends category. Student applicants need admission/acceptance and may need residence permit after arrival. Entry visa may be US$50 baseline; longer student stay requires immigration permit/residence steps. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$50",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$50",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$50",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$50 + residence/student permit fees",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "ghana": {
+    "fee_source_url": "https://www.ghanaimmigration.org/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium-Low. Use Ghana Embassy/eVisa portal; business/medical/student require supporting letters/admission. Ghana consular/eVisa fees vary by single/multiple entry and speed; this is a practical planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Use Ghana Embassy/eVisa portal; business/medical/student require supporting letters/admission. Business applicants should attach host invitation and sending company letter. Ghana consular/eVisa fees vary by single/multiple entry and speed; this is a practical planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Use Ghana Embassy/eVisa portal; business/medical/student require supporting letters/admission. Medical applicants should attach hospital appointment and treatment cost estimate. Ghana consular/eVisa fees vary by single/multiple entry and speed; this is a practical planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Use Ghana Embassy/eVisa portal; business/medical/student require supporting letters/admission. Student applicants need admission/acceptance and may need residence permit after arrival. Entry visa fee plus student/residence permit stage may apply. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$60-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$60-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$60-200",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$60-200 + residence permit costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "nigeria": {
+    "fee_source_url": "https://immigration.gov.ng/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Requires online application, payment, interview/biometrics at mission/OVIS where applicable. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Requires online application, payment, interview/biometrics at mission/OVIS where applicable. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Requires online application, payment, interview/biometrics at mission/OVIS where applicable. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Requires online application, payment, interview/biometrics at mission/OVIS where applicable. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$70-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$100-250",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$70-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$100-250 + residence/regularization costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "singapore": {
+    "fee_source_url": "https://www.ica.gov.sg/enter-transit-depart/entering-singapore/visa_requirements",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High. Ethiopia is visa-required group; visa is not an immigration pass. Workbook confidence: High. Invitation/LOI may be required depending application method. Workbook confidence: High. Medical purpose still entry visa; entry decided by ICA. Workbook confidence: Medium. Apply through SOLAR after school registration if eligible. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "SGD 30 non-refundable processing fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "SGD 30 non-refundable processing fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "SGD 30 entry visa fee if visa required",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Student's Pass fees: application/issuance fees via ICA; entry visa SGD 30 if visa-required",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "indonesia": {
+    "fee_source_url": "https://evisa.imigrasi.go.id/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Business/medical/student use specific visa indexes and sponsor/institution docs. Common 60-day tourist eVisa fee benchmark; eVOA/eVisa eligibility and index determine final fee. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Business/medical/student use specific visa indexes and sponsor/institution docs. Business applicants should attach host invitation and sending company letter. Business visitor visa index and sponsor route determine final fee. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Business/medical/student use specific visa indexes and sponsor/institution docs. Medical applicants should attach hospital appointment and treatment cost estimate. Medical visit usually follows a visitor/limited-stay route depending treatment length. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Business/medical/student use specific visa indexes and sponsor/institution docs. Student applicants need admission/acceptance and may need residence permit after arrival. Student/limited-stay visa plus permit stages can add costs. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: IDR 1,500,000 / US$95",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: IDR 1,500,000-2,000,000 / US$95-130",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: IDR 1,500,000-2,000,000 / US$95-130",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: IDR 2,000,000-3,000,000+ / US$130-200+",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "philippines": {
+    "fee_source_url": "https://www.visa.gov.ph/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Business/medical are usually temporary visitor with invitation/medical docs; student visa after school acceptance. Common temporary visitor visa fee structure; consulate may differ. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Business/medical are usually temporary visitor with invitation/medical docs; student visa after school acceptance. Business applicants should attach host invitation and sending company letter. Common temporary visitor visa fee structure; consulate may differ. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Business/medical are usually temporary visitor with invitation/medical docs; student visa after school acceptance. Medical applicants should attach hospital appointment and treatment cost estimate. Common temporary visitor visa fee structure; consulate may differ. | Use as an estimate only; confirm the live official fee before paying. Workbook confidence: Medium. Business/medical are usually temporary visitor with invitation/medical docs; student visa after school acceptance. Student applicants need admission/acceptance and may need residence permit after arrival. Student visa conversion/9(f), ACR I-Card, and local immigration/school processing can add up. | Use as an estimate only; confirm the live official fee before paying. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$30 single / US$60 multiple 6 months / US$90 multiple 1 year",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$30 single / US$60 multiple 6 months / US$90 multiple 1 year",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$30 single / US$60 multiple 6 months / US$90 multiple 1 year",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$30-90 entry visa + student permit/residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "pakistan": {
+    "fee_source_url": "https://visa.nadra.gov.pk/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium. Tourist/business/medical/student eVisa categories; business may need invitation from SECP/chamber-approved company. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/medical/student eVisa categories; business may need invitation from SECP/chamber-approved company. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/medical/student eVisa categories; business may need invitation from SECP/chamber-approved company. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium. Tourist/business/medical/student eVisa categories; business may need invitation from SECP/chamber-approved company. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$8-60",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$50-150",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$30-100",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$80-200",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "bangladesh": {
+    "fee_source_url": "https://www.visa.gov.bd/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Medium-Low. Tourist/business/medical/student require invitation/admission/hospital documents. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Tourist/business/medical/student require invitation/admission/hospital documents. Business applicants should attach host invitation and sending company letter. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Tourist/business/medical/student require invitation/admission/hospital documents. Medical applicants should attach hospital appointment and treatment cost estimate. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Medium-Low. Tourist/business/medical/student require invitation/admission/hospital documents. Student applicants need admission/acceptance and may need residence permit after arrival. Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: US$50-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: US$50-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: US$50-160",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: US$50-160 + student/residence costs",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "spain": {
+    "fee_source_url": "https://www.exteriores.gob.es/Consulados/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Spain national/student visa fee varies by nationality/local currency; use Schengen/national planning range. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: EUR 80-90",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "portugal": {
+    "fee_source_url": "https://vistos.mne.gov.pt/en/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Portuguese national/study visa fees commonly use EUR 90 baseline; VFS/service fees may be extra. | Use as an estimate only; confirm the live official fee before paying. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: EUR 90",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "switzerland": {
+    "fee_source_url": "https://www.dfae.admin.ch/countries/ethiopia/en/home/visa.html",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: High for Schengen fee; service fee must be verified in local VAC portal. Medical treatment under 90 days normally uses Schengen C visa with medical purpose; business/tourist also Schengen C. Workbook confidence: Medium. Long-stay student visas are national, not Schengen C. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "EUR 90 Schengen short-stay visa fee",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "National D fee CHF 80 adults; local ETB equivalent; canton fees may apply",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  },
+  "ireland": {
+    "fee_source_url": "https://www.irishimmigration.ie/at-the-border/giving-your-details-on-ais/fees/",
+    "source_note": "Imported from visa_menged_all_50_countries_estimates_cleaned.xlsx prepared May 6, 2026. Workbook confidence: Low. Portal/account-only or embassy-counter fee. Common Ireland visa fee structure; exact local payment route/currency should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low. Portal/account-only or embassy-counter fee. Business applicants should attach host invitation and sending company letter. Common Ireland visa fee structure; exact local payment route/currency should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low. Portal/account-only or embassy-counter fee. Medical applicants should attach hospital appointment and treatment cost estimate. Common Ireland visa fee structure; exact local payment route/currency should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Workbook confidence: Low. Portal/account-only or embassy-counter fee. Student applicants need admission/acceptance and may need residence permit after arrival. Common Ireland visa fee structure; exact local payment route/currency should be verified. | Use as an estimate only; confirm the live official fee before paying. Based on official portals, embassy fee schedules, regional consular norms, and comparable visa categories. Use these amounts for planning only and verify the official source before paying.",
+    "types": [
+      {
+        "type": "Tourist / visitor",
+        "fee": "Estimated fee: EUR 60 single / EUR 100 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Business",
+        "fee": "Estimated fee: EUR 60 single / EUR 100 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Medical",
+        "fee": "Estimated fee: EUR 60 single / EUR 100 multiple",
+        "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
+      },
+      {
+        "type": "Student",
+        "fee": "Estimated fee: EUR 60 single / EUR 100 multiple",
+        "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
+      }
+    ]
+  }
 }

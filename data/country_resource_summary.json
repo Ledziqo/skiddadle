@@ -2,8 +2,8 @@
   "United Kingdom": {
     "resources": 8,
     "pdfs": 0,
-    "portals": 2,
-    "needs_verification": 2
+    "portals": 1,
+    "needs_verification": 0
   },
   "United States": {
     "resources": 8,
@@ -15,7 +15,7 @@
     "resources": 11,
     "pdfs": 5,
     "portals": 1,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "Schengen Area": {
     "resources": 5,
@@ -27,7 +27,7 @@
     "resources": 8,
     "pdfs": 1,
     "portals": 0,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "France": {
     "resources": 8,
@@ -39,25 +39,25 @@
     "resources": 8,
     "pdfs": 2,
     "portals": 0,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "Netherlands": {
     "resources": 8,
     "pdfs": 4,
     "portals": 0,
-    "needs_verification": 3
+    "needs_verification": 0
   },
   "Sweden": {
     "resources": 9,
-    "pdfs": 4,
+    "pdfs": 3,
     "portals": 0,
-    "needs_verification": 2
+    "needs_verification": 0
   },
   "Austria": {
     "resources": 8,
     "pdfs": 3,
     "portals": 0,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "Belgium": {
     "resources": 8,
@@ -67,9 +67,9 @@
   },
   "India": {
     "resources": 10,
-    "pdfs": 3,
+    "pdfs": 2,
     "portals": 6,
-    "needs_verification": 2
+    "needs_verification": 0
   },
   "China": {
     "resources": 12,
@@ -91,7 +91,7 @@
   },
   "Qatar": {
     "resources": 9,
-    "pdfs": 1,
+    "pdfs": 0,
     "portals": 1,
     "needs_verification": 0
   },
@@ -109,21 +109,21 @@
   },
   "South Africa": {
     "resources": 9,
-    "pdfs": 2,
+    "pdfs": 1,
     "portals": 0,
-    "needs_verification": 2
+    "needs_verification": 0
   },
   "Kenya": {
     "resources": 10,
-    "pdfs": 1,
+    "pdfs": 0,
     "portals": 4,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "Egypt": {
     "resources": 7,
     "pdfs": 0,
     "portals": 6,
-    "needs_verification": 2
+    "needs_verification": 1
   },
   "Japan": {
     "resources": 9,
@@ -135,7 +135,7 @@
     "resources": 9,
     "pdfs": 2,
     "portals": 5,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "Malaysia": {
     "resources": 7,
@@ -147,12 +147,162 @@
     "resources": 8,
     "pdfs": 1,
     "portals": 1,
-    "needs_verification": 1
+    "needs_verification": 0
   },
   "Russia": {
     "resources": 7,
     "pdfs": 0,
     "portals": 3,
-    "needs_verification": 2
+    "needs_verification": 0
+  },
+  "Oman": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Kuwait": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Bahrain": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Jordan": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Lebanon": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Israel": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Morocco": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Tunisia": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Djibouti": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Sudan": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "South Sudan": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Uganda": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Tanzania": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Rwanda": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Ghana": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Nigeria": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Singapore": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Indonesia": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Philippines": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Pakistan": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Bangladesh": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Spain": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Portugal": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Switzerland": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
+  },
+  "Ireland": {
+    "resources": 7,
+    "pdfs": 0,
+    "portals": 1,
+    "needs_verification": 0
   }
 }

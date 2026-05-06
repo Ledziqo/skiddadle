@@ -42,7 +42,7 @@
     "status": "full_guide",
     "region": "Europe",
     "hub": "schengen",
-    "note": "Use France-Visas portal."
+    "note": "Use Franconline visas portal."
   },
   {
     "slug": "italy",
@@ -123,7 +123,7 @@
     "status": "full_guide",
     "region": "Europe/Asia",
     "hub": "turkey",
-    "note": "Sticker visa pre-application/e-Visa."
+    "note": "Sticker visa pre-application/online visa."
   },
   {
     "slug": "thailand",
@@ -150,7 +150,7 @@
     "status": "full_guide",
     "region": "Africa",
     "hub": "kenya",
-    "note": "eTA portal-first."
+    "note": "Official Kenya travel authorization / visa rules first."
   },
   {
     "slug": "qatar",
@@ -195,7 +195,7 @@
     "status": "full_guide",
     "region": "Asia",
     "hub": "malaysia",
-    "note": "eVisa/embassy resources."
+    "note": "official visa and embassy resources."
   },
   {
     "slug": "australia",
@@ -223,5 +223,230 @@
     "region": "Europe",
     "hub": "schengen",
     "note": "Schengen/TLS; Ethiopia-specific warnings."
+  },
+  {
+    "slug": "oman",
+    "name": "Oman",
+    "priority": 26,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "oman",
+    "note": "GCC work, family and visit routes; verify visa and sponsor rules."
+  },
+  {
+    "slug": "kuwait",
+    "name": "Kuwait",
+    "priority": 27,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "kuwait",
+    "note": "Common GCC work/family destination; many routes are sponsor-led."
+  },
+  {
+    "slug": "bahrain",
+    "name": "Bahrain",
+    "priority": 28,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "bahrain",
+    "note": "GCC visit and work routes; use Bahrain visa/NPRA official sources."
+  },
+  {
+    "slug": "jordan",
+    "name": "Jordan",
+    "priority": 29,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "jordan",
+    "note": "Regional visit, medical and family routes; verify e-services and embassy instructions."
+  },
+  {
+    "slug": "lebanon",
+    "name": "Lebanon",
+    "priority": 30,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "lebanon",
+    "note": "Diaspora/work/family travel route; verify current entry and sponsor rules carefully."
+  },
+  {
+    "slug": "israel",
+    "name": "Israel",
+    "priority": 31,
+    "status": "full_guide",
+    "region": "Middle East",
+    "hub": "israel",
+    "note": "Family, pilgrimage, medical and work-related routes; entry authorization and visa rules can change."
+  },
+  {
+    "slug": "morocco",
+    "name": "Morocco",
+    "priority": 32,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "morocco",
+    "note": "Tourism, business and study route; Morocco Access Maroc/official visa routes may apply."
+  },
+  {
+    "slug": "tunisia",
+    "name": "Tunisia",
+    "priority": 33,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "tunisia",
+    "note": "North Africa tourism/medical/business route; verify embassy rules for Ethiopian passports."
+  },
+  {
+    "slug": "djibouti",
+    "name": "Djibouti",
+    "priority": 34,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "djibouti",
+    "note": "Neighbouring country with frequent business, family and transit travel."
+  },
+  {
+    "slug": "sudan",
+    "name": "Sudan",
+    "priority": 35,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "sudan",
+    "note": "Neighbouring/family/business route; current conditions and entry rules require careful verification."
+  },
+  {
+    "slug": "south-sudan",
+    "name": "South Sudan",
+    "priority": 36,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "south-sudan",
+    "note": "Regional work, NGO and business route; use official visa/mission instructions."
+  },
+  {
+    "slug": "uganda",
+    "name": "Uganda",
+    "priority": 37,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "uganda",
+    "note": "Common regional travel, business, education and medical route; official visa portal first."
+  },
+  {
+    "slug": "tanzania",
+    "name": "Tanzania",
+    "priority": 38,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "tanzania",
+    "note": "Tourism, business, study and regional travel; official visa route."
+  },
+  {
+    "slug": "rwanda",
+    "name": "Rwanda",
+    "priority": 39,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "rwanda",
+    "note": "Conference, business, tourism and regional travel; official Irembo/immigration route."
+  },
+  {
+    "slug": "ghana",
+    "name": "Ghana",
+    "priority": 40,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "ghana",
+    "note": "Business, education, conference and diaspora travel; embassy/online forms route."
+  },
+  {
+    "slug": "nigeria",
+    "name": "Nigeria",
+    "priority": 41,
+    "status": "full_guide",
+    "region": "Africa",
+    "hub": "nigeria",
+    "note": "Business, conference, family and study route; official immigration portal first."
+  },
+  {
+    "slug": "singapore",
+    "name": "Singapore",
+    "priority": 42,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "singapore",
+    "note": "Business, conference, tourism and transit hub; e-services/ICA route."
+  },
+  {
+    "slug": "indonesia",
+    "name": "Indonesia",
+    "priority": 43,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "indonesia",
+    "note": "Tourism, business and study route; official visa/immigration portal."
+  },
+  {
+    "slug": "philippines",
+    "name": "Philippines",
+    "priority": 44,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "philippines",
+    "note": "Education, medical, tourism and business route; official visa and embassy routes."
+  },
+  {
+    "slug": "pakistan",
+    "name": "Pakistan",
+    "priority": 45,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "pakistan",
+    "note": "Business, family, medical and study route; official online visa system."
+  },
+  {
+    "slug": "bangladesh",
+    "name": "Bangladesh",
+    "priority": 46,
+    "status": "full_guide",
+    "region": "Asia",
+    "hub": "bangladesh",
+    "note": "Business, study, medical and family route; use embassy/visa application instructions."
+  },
+  {
+    "slug": "spain",
+    "name": "Spain",
+    "priority": 47,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen short-stay plus Spain national/student/work routes."
+  },
+  {
+    "slug": "portugal",
+    "name": "Portugal",
+    "priority": 48,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen short-stay plus Portugal national/student/work routes."
+  },
+  {
+    "slug": "switzerland",
+    "name": "Switzerland",
+    "priority": 49,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "schengen",
+    "note": "Schengen short-stay and Swiss national visa routes; verify embassy/VFS instructions."
+  },
+  {
+    "slug": "ireland",
+    "name": "Ireland",
+    "priority": 50,
+    "status": "full_guide",
+    "region": "Europe",
+    "hub": "ireland",
+    "note": "Non-Schengen European route; use Irish Immigration/AVATS guidance."
   }
 ]

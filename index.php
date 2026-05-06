@@ -2,7 +2,9 @@
 require_once __DIR__ . '/includes/functions.php';
 $countries = vm_countries();
 $summary = vm_load_json('country_resource_summary.json');
-$popularCountries = array_slice($countries, 0, 12);
+$countriesAlpha = $countries;
+usort($countriesAlpha, fn(array $a, array $b): int => strcasecmp((string)($a['name'] ?? ''), (string)($b['name'] ?? '')));
+$popularCountries = $countriesAlpha;
 $paid = [
   ['Check my file', 'from 999 birr', 'We find missing documents and weak points.', 'review-request.php'],
   ['Fix my letters', 'from 1,500 birr', 'Cover, sponsor, invitation, employer or refusal letters.', 'letter-generator.php'],
@@ -27,7 +29,7 @@ vm_page_start('Ethiopian Visa Guide 2026 — Free Country Guides, Official Forms
     <b class="stamp stamp-one">VISA</b>
     <b class="stamp stamp-two">GUIDE</b>
     <b class="doc-shape"></b>
-    <?php foreach (array_slice($countries, 0, 12) as $i => $country): ?>
+    <?php foreach (array_slice($countriesAlpha, 0, 12) as $i => $country): ?>
       <span style="--i:<?= (int)$i ?>"><?= vm_country_flag((string)($country['slug'] ?? '')) ?></span>
     <?php endforeach; ?>
   </div>
@@ -35,7 +37,7 @@ vm_page_start('Ethiopian Visa Guide 2026 — Free Country Guides, Official Forms
 
 <section class="country-first" id="country-guides">
   <div class="simple-section-head">
-    <div><span class="eyebrow">Country guides + official forms</span><h2><?= vm_h(vm_t('start_destination')) ?></h2></div>
+    <div><span class="eyebrow">Country guides + official forms</span><h2><?= vm_h(vm_t('start_destination')) ?></h2><p class="muted">Sorted A-Z so destinations are easy to scan.</p></div>
     <a href="<?= vm_url('forms.php') ?>"><?= vm_h(vm_t('browse_all_forms')) ?></a>
   </div>
   <div class="country-first-grid">
