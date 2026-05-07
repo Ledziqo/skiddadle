@@ -29,7 +29,7 @@ $visaSlug = (string)($entry['visa_type_slug'] ?? '');
       <div class="visa-hub-fee">
         <strong>Fee:</strong>
         <span><?= vm_h($feeClean) ?></span>
-        <?php if ($feeHasVerify): ?><span class="verify-badge">Confirm before paying</span><?php endif; ?>
+        <?php if ($feeHasVerify): ?><span class="verify-badge">Confirm fee</span><?php endif; ?>
       </div>
 
       <?php if ($processing): ?>

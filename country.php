@@ -58,7 +58,7 @@ vm_page_start(($country['name'] ?? 'Country') . ' Visa for Ethiopians — Fees, 
 <nav class="country-page-nav" aria-label="<?= vm_h($country['name']) ?> guide sections">
   <a href="#official-forms">Official forms</a>
   <a href="#process">Steps</a>
-  <a href="#paid-help">Paid help</a>
+  <a href="#free-tools">Free tools</a>
   <a href="#contact">Contact</a>
 </nav>
 <section class="guide-section country-quick-answer">
@@ -240,7 +240,7 @@ vm_page_start(($country['name'] ?? 'Country') . ' Visa for Ethiopians — Fees, 
     </div>
   </div>
   <?php endif; ?>
-  <div class="notice fee-note"><strong>Fee warning:</strong> <?= vm_h((string)($feeGuide['source_note'] ?? 'Fees can change. Verify on the official source before paying.')) ?></div>
+  <div class="notice fee-note"><strong>Fee warning:</strong> <?= vm_h((string)($feeGuide['source_note'] ?? 'Fees can change. Verify on the official source.')) ?></div>
 </section>
 <?php endif; ?>
 <section class="guide-section" id="process">
@@ -283,20 +283,20 @@ vm_page_start(($country['name'] ?? 'Country') . ' Visa for Ethiopians — Fees, 
     </dl>
   </aside>
 </section>
-<section class="guide-section paid-help-clean" id="paid-help">
-  <div class="section-head inline"><div><span class="eyebrow">Paid help</span><h2>Fix the part of the file that is weak.</h2><p>Choose paid help by problem, not by guessing. Each service is for a specific file issue.</p></div><a href="<?= vm_url('pricing.php') ?>">See all paid help</a></div>
+<section class="guide-section paid-help-clean" id="free-tools">
+  <div class="section-head inline"><div><span class="eyebrow">Free tools</span><h2>Fix the part of the file that is weak.</h2><p>Choose the free tool that matches your file issue.</p></div><a href="<?= vm_url('free-tools.php') ?>">See all free tools</a></div>
   <div class="paid-help-grid">
     <?php foreach ($packs as $pack): ?>
       <article>
         <div>
-          <span class="badge"><?= vm_h($pack['price'] ?? 'Paid support') ?></span>
+          <span class="badge">Free</span>
           <h3><?= vm_h($pack['title'] ?? '') ?></h3>
           <p><?= vm_h($pack['tagline'] ?? '') ?></p>
         </div>
         <?php if (!empty($pack['includes']) && is_array($pack['includes'])): ?>
           <ul><?php foreach (array_slice($pack['includes'], 0, 3) as $included): ?><li><?= vm_h($included) ?></li><?php endforeach; ?></ul>
         <?php endif; ?>
-        <a class="button secondary" href="<?= vm_url('pack.php?id=' . vm_h($pack['id'] ?? '')) ?>">Request this help</a>
+        <a class="button secondary" href="<?= vm_url('pack.php?id=' . vm_h($pack['id'] ?? '')) ?>">Open this tool</a>
       </article>
     <?php endforeach; ?>
   </div>

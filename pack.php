@@ -5,8 +5,8 @@ $packId = (string)($_GET['id'] ?? '');
 $pack = vm_pack_by_id($packId);
 if (!$pack) {
     http_response_code(404);
-    vm_page_start('Service not found');
-    echo '<section class="page-hero"><h1>Service not found.</h1><p><a href="' . vm_url('pricing.php') . '">View services</a></p></section>';
+    vm_page_start('Tool not found');
+    echo '<section class="page-hero"><h1>Tool not found.</h1><p><a href="' . vm_url('free-tools.php') . '">View free tools</a></p></section>';
     vm_page_end();
     exit;
 }
@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     vm_verify_csrf();
     $saved = vm_save_submission('pack-request', [
         'pack_id' => $packId,
-        'service_title' => (string)($pack['title'] ?? ''),
+        'tool_title' => (string)($pack['title'] ?? ''),
         'name' => vm_input('name'),
         'contact' => vm_input('contact'),
         'country' => vm_input('country'),
@@ -50,19 +50,19 @@ $turnaround = str_contains(strtolower((string)($pack['title'] ?? '')), 'quick') 
 vm_page_start((string)$pack['title']);
 ?>
 <section class="page-hero pricing-hero">
-  <span class="eyebrow"><?= vm_h($pack['country'] ?? 'Paid support') ?></span>
-  <h1><?= vm_h($pack['title'] ?? 'VisaMenged service') ?></h1>
-  <p><?= vm_h($pack['tagline'] ?? 'Paid support for organizing your visa file.') ?></p>
-  <p class="price"><?= vm_h($pack['price'] ?? '') ?></p>
-  <div class="hero-actions"><a class="button" href="#request-service">Request service</a><a class="button secondary" href="<?= vm_url('checklist-generator.php') ?>">Get free score first</a></div>
+  <span class="eyebrow"><?= vm_h($pack['country'] ?? 'Free tool') ?></span>
+  <h1><?= vm_h($pack['title'] ?? 'VisaMenged tool') ?></h1>
+  <p><?= vm_h($pack['tagline'] ?? 'Free help for organizing your visa file.') ?></p>
+  <p class="price">Free</p>
+  <div class="hero-actions"><a class="button" href="#request-service">Start this tool</a><a class="button secondary" href="<?= vm_url('checklist-generator.php') ?>">Get checklist first</a></div>
 </section>
 <?php if ($saved): ?>
 <section class="notice success">
-  <strong>Service request saved.</strong>
-  <p>Your request ID is <strong><?= vm_h($saved) ?></strong>. This is not a payment confirmation; checkout/payment will be connected later.</p>
+  <strong>Tool request saved.</strong>
+  <p>Your request ID is <strong><?= vm_h($saved) ?></strong>.</p>
   <p>We will contact you within the stated turnaround time to discuss next steps.</p>
   <div class="hero-actions" style="margin-top:14px">
-    <a class="button" href="<?= vm_url('pricing.php') ?>">View all services</a>
+    <a class="button" href="<?= vm_url('free-tools.php') ?>">View all free tools</a>
     <a class="button secondary" href="<?= vm_url('index.php') ?>">Back to home</a>
   </div>
 </section>
@@ -80,7 +80,7 @@ vm_page_start((string)$pack['title']);
       </div>
     </article>
     <article class="card">
-      <h2>What this service includes</h2>
+      <h2>What this tool includes</h2>
       <ul><?php foreach ((array)($pack['includes'] ?? []) as $item): ?><li><?= vm_h($item) ?></li><?php endforeach; ?></ul>
     </article>
     <article class="card">
@@ -102,7 +102,7 @@ vm_page_start((string)$pack['title']);
     </article>
   </div>
   <aside class="side-panel" id="request-service">
-    <h2>Request service</h2>
+    <h2>Start this tool</h2>
     <p><strong>Turnaround:</strong> <?= vm_h($turnaround) ?></p>
     <p><strong>Revision expectation:</strong> one clarification pass is included for wording or checklist corrections. New facts/documents may require extra review.</p>
     <form method="post" class="mini-form">
@@ -113,9 +113,9 @@ vm_page_start((string)$pack['title']);
       <label>Visa type <?= vm_visa_type_select('visa_type', '', false) ?></label>
       <label>Timeline <input name="timeline" placeholder="travel date / deadline"></label>
       <label>Notes <textarea name="notes" rows="4" placeholder="Tell us what worries you most about the file."></textarea></label>
-      <button class="button" type="submit">Request service</button>
+      <button class="button" type="submit">Submit details</button>
     </form>
-    <p class="muted">Payment is not connected yet. This request records interest and required details for follow-up.</p>
+    <p class="muted">This is free. Your details help create a more useful next-step plan.</p>
   </aside>
 </section>
 <?php require __DIR__ . '/includes/disclaimer.php'; vm_page_end(); ?>

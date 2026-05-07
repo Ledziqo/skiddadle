@@ -1,11 +1,11 @@
 <?php
 require_once __DIR__ . '/includes/functions.php';
-vm_page_start('VisaMenged Free Tools', 'Free visa helpers for Ethiopian applicants. Checklists, letters, interview practice and refusal recovery without payment.');
+vm_page_start('VisaMenged Free Tools', 'Free visa helpers for Ethiopian applicants. Checklists, letters, interview practice and refusal recovery.');
 ?>
 <section class="page-hero pricing-hero">
   <span class="eyebrow">Free tools</span>
   <h1>Everything useful is free.</h1>
-  <p>Use these tools to organize your visa file, draft starter text, and prepare for interviews without checkout or paid access.</p>
+  <p>Use these tools to organize your visa file, draft starter text, and prepare for interviews.</p>
 </section>
 <section class="pricing-grid simple-pricing-grid">
   <article class="card price-card">

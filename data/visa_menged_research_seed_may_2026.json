@@ -17552,7 +17552,7 @@
         },
         "fees": {
           "visa_fee": {
-            "amount": "General Japan visa fee: JPY 3,000 single-entry / JPY 6,000 double or multiple; paid only if issued",
+            "amount": "General Japan visa fee: JPY 3,000 single-entry / JPY 6,000 double or multiple; collected only if issued",
             "approx_usd": "Shown in source currency or ETB where the official source provides it.",
             "notes": "Imported from the cleaned May 2026 workbook. Workbook confidence: High. Some nationalities exempt/reduced; verify at Embassy. Always verify on the official source before payment."
           },
@@ -17709,7 +17709,7 @@
         },
         "fees": {
           "visa_fee": {
-            "amount": "JPY 3,000 single-entry visa after Certificate of Eligibility; fee paid if issued",
+            "amount": "JPY 3,000 single-entry visa after Certificate of Eligibility; fee collected if issued",
             "approx_usd": "Shown in source currency or ETB where the official source provides it.",
             "notes": "Imported from the cleaned May 2026 workbook. Workbook confidence: High. COE issued by Japan immigration is key prerequisite. Always verify on the official source before payment."
           },

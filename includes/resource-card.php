@@ -12,12 +12,6 @@ $feeRows = vm_public_visa_type_rows_for_resource($resource, $resourceHub, 4);
 $contactCards = (function_exists('vm_contact_map_cards') && $resourceSlug !== '' && $resourceCountry) ? vm_contact_map_cards($resourceSlug, vm_country_resources($resourceSlug), $resourceCountry) : [];
 $primaryContact = $contactCards[0] ?? null;
 $typeSlug = vm_slugify((string)($resource['visa_type'] ?? 'visa-type'));
-$basketPayload = [
-    'type' => 'Official resource',
-    'title' => (string)($resource['title'] ?? ''),
-    'meta' => trim((string)($resource['country'] ?? '') . ' - ' . (string)($resource['visa_type'] ?? ''), ' -'),
-    'url' => $resourceUrl,
-];
 ?>
 <article class="card resource-card clickable-card" data-card-href="<?= vm_h($detailUrl) ?>" data-resource-card data-country="<?= vm_h($resource['country'] ?? '') ?>" data-visa="<?= vm_h($resource['visa_type'] ?? '') ?>" data-title="<?= vm_h($resource['title'] ?? '') ?>" data-source="<?= vm_h($resource['source_org'] ?? '') ?>" data-category="<?= vm_h($resource['category'] ?? '') ?>" data-status="<?= vm_h($status) ?>">
   <div class="card-top">
@@ -41,9 +35,9 @@ $basketPayload = [
         <h4>Visa prices</h4>
         <?php if ($feeRows): ?>
           <ul><?php foreach ($feeRows as $row): ?><li><strong><?= vm_h($row['type']) ?>:</strong> <?= vm_h(vm_fee_display((string)$row['fee'])) ?></li><?php endforeach; ?></ul>
-          <p class="fee-note">Birr amounts are approximate planning conversions; pay using the official currency and fee page.</p>
+          <p class="fee-note">Birr amounts are approximate planning conversions; verify the official currency and fee page.</p>
         <?php else: ?>
-          <p>Check the official fee page for this country and visa type before paying.</p>
+          <p>Check the official fee page for this country and visa type.</p>
         <?php endif; ?>
         <?php if (($feeGuide['fee_source_url'] ?? '') !== ''): ?><a href="<?= vm_h((string)$feeGuide['fee_source_url']) ?>" target="_blank" rel="noopener">Open official fee page</a><?php endif; ?>
       </section>
@@ -86,7 +80,6 @@ $basketPayload = [
     <?php endif; ?>
     <a class="button" href="<?= vm_h($resourceUrl) ?>" target="_blank" rel="noopener"><?= vm_h(vm_primary_action_label($resource)) ?></a>
     <a class="button ghost" href="<?= vm_h($officialPage) ?>" target="_blank" rel="noopener">Open Official Source</a>
-    <button class="button secondary" type="button" data-add-basket='<?= vm_h(json_encode($basketPayload, JSON_UNESCAPED_SLASHES)) ?>'>Save to list</button>
     <a class="link-risk" href="<?= vm_url('contact.php') ?>?topic=outdated-form">Report outdated form</a>
   </div>
 </article>

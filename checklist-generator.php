@@ -166,13 +166,13 @@ vm_page_start('Free Visa Checklist Generator for Ethiopians', 'Generate a free v
   <?php if ($matchedTemplates): ?><h3>Suggested support templates</h3><div class="grid cards-grid compact"><?php foreach ($matchedTemplates as $template): require __DIR__ . '/includes/template-card.php'; endforeach; ?></div><?php endif; ?>
   <section class="upgrade-strip">
     <div>
-      <span class="eyebrow">Paid fix path</span>
+      <span class="eyebrow">Free fix path</span>
       <h3>Want VisaMenged to fix the weak points?</h3>
       <p>Turn this score into an organized file audit, polished letters, sponsor proof bundle or previous-refusal recovery plan.</p>
     </div>
-    <a class="button" href="<?= vm_url('pricing.php') ?>">See paid support</a>
+    <a class="button" href="<?= vm_url('free-tools.php') ?>">Open free tools</a>
   </section>
-  <?php if ($recommendedPacks): ?><h3>Recommended services for this score</h3><div class="grid cards-grid compact"><?php foreach ($recommendedPacks as $pack): ?><article class="card pack-card"><div class="card-top"><span class="badge"><?= vm_h($pack['country'] ?? '') ?></span><span class="badge muted"><?= vm_h($pack['price'] ?? '') ?></span></div><h3><?= vm_h($pack['title'] ?? '') ?></h3><p><?= vm_h($pack['tagline'] ?? '') ?></p><a class="button secondary" href="<?= vm_url('pack.php?id=' . vm_h($pack['id'] ?? '')) ?>">Request service</a></article><?php endforeach; ?></div><?php endif; ?>
+  <?php if ($recommendedPacks): ?><h3>Recommended tools for this score</h3><div class="grid cards-grid compact"><?php foreach ($recommendedPacks as $pack): ?><article class="card pack-card"><div class="card-top"><span class="badge"><?= vm_h($pack['country'] ?? '') ?></span><span class="badge muted">Free</span></div><h3><?= vm_h($pack['title'] ?? '') ?></h3><p><?= vm_h($pack['tagline'] ?? '') ?></p><a class="button secondary" href="<?= vm_url('pack.php?id=' . vm_h($pack['id'] ?? '')) ?>">Open tool</a></article><?php endforeach; ?></div><?php endif; ?>
   <div class="actions"><a class="button" href="<?= vm_url('review-request.php') ?>">Request document review</a><a class="button secondary" href="<?= vm_url('templates.php') ?>">Find support templates</a></div>
 </section>
 <?php endif; ?>

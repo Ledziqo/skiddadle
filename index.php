@@ -61,7 +61,7 @@ vm_page_start('VisaMenged — Free Visa Guides & Document Help for Ethiopians', 
 
 <section class="free-tools">
   <div class="simple-section-head">
-    <div><span class="eyebrow">Free tools</span><h2>Start without paying.</h2></div>
+    <div><span class="eyebrow">Free tools</span><h2>Use the tools for free.</h2></div>
   </div>
   <div class="free-tools-grid">
     <a href="<?= vm_url('start.php') ?>">

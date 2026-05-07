@@ -1,7 +1,13 @@
 <?php
 require_once __DIR__ . '/functions.php';
+if (!headers_sent()) {
+    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+    header('Expires: 0');
+}
 $vm_css_path = __DIR__ . '/../assets/css/style.css';
-$vm_css_version = is_file($vm_css_path) ? (string) filemtime($vm_css_path) : '1';
+clearstatcache(true, $vm_css_path);
+$vm_css_version = is_file($vm_css_path) ? (string)(filemtime($vm_css_path) . '-' . filesize($vm_css_path)) : '1';
 ?>
 <!doctype html>
 <html lang="<?= vm_h(vm_lang()) ?>">
@@ -12,7 +18,6 @@ $vm_css_version = is_file($vm_css_path) ? (string) filemtime($vm_css_path) : '1'
   <meta name="description" content="<?= vm_h($GLOBALS['vm_page_description'] ?? 'Official visa resources and document support for Ethiopian applicants.') ?>">
   <link rel="canonical" href="<?= vm_h(vm_canonical_url()) ?>">
   <link rel="alternate" hreflang="en" href="<?= vm_h(str_contains(vm_canonical_url(), '?') ? vm_canonical_url() . '&lang=en' : vm_canonical_url() . '?lang=en') ?>">
-  <link rel="alternate" hreflang="am" href="<?= vm_h(str_contains(vm_canonical_url(), '?') ? vm_canonical_url() . '&lang=am' : vm_canonical_url() . '?lang=am') ?>">
   <link rel="stylesheet" href="<?= vm_url('assets/css/style.css?v=' . $vm_css_version) ?>">
   <style>
     /* Critical homepage fallback if cached/deployed CSS is stale */
@@ -25,7 +30,7 @@ $vm_css_version = is_file($vm_css_path) ? (string) filemtime($vm_css_path) : '1'
     .free-tools{background:linear-gradient(135deg,#f6faff 0%,#ffffff 60%,#eef8ff 100%)}
     .simple-section-head{max-width:820px;margin:0 0 30px}
     .simple-section-head.row{display:flex;align-items:end;justify-content:space-between;gap:24px;max-width:none}
-    .simple-section-head span{display:block;margin-bottom:10px;color:#007f70;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+    .simple-section-head span{display:block;margin-bottom:10px;color:#1177e8;font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
     .simple-section-head h2,.final-cta h2{margin:0;color:#07345f;font-size:clamp(34px,5vw,58px);line-height:.98;letter-spacing:-.04em}
     .simple-section-head p,.final-cta p{max-width:760px;color:#435771;font-size:18px;line-height:1.7}
     .steps-grid,.free-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
@@ -76,39 +81,11 @@ $vm_css_version = is_file($vm_css_path) ? (string) filemtime($vm_css_path) : '1'
   </a>
   <?php require __DIR__ . '/nav.php'; ?>
   <div class="top-actions">
-    <div class="language-switch" aria-label="Language switch">
-      <a class="<?= vm_lang() === 'en' ? 'active' : '' ?>" href="<?= vm_h(vm_lang_url('en')) ?>">EN</a>
-      <a class="<?= vm_lang() === 'am' ? 'active' : '' ?>" href="<?= vm_h(vm_lang_url('am')) ?>">AM</a>
-    </div>
     <button class="theme-switch" type="button" data-theme-toggle aria-label="Toggle light or dark mode" aria-pressed="false">
       <span>Light</span>
       <i aria-hidden="true"></i>
       <span>Dark</span>
     </button>
-    <button class="basket-toggle" type="button" data-basket-open><?= vm_h(vm_t('saved_list')) ?> <span data-basket-count>0</span></button>
   </div>
 </header>
-<script>
-window.VM_I18N = <?= json_encode([
-  'savedTitle' => vm_t('saved_resources'),
-  'noItems' => vm_lang() === 'am' ? 'እስካሁን የተቀመጠ ነገር የለም።' : 'No saved items yet.',
-  'open' => vm_lang() === 'am' ? 'ክፈት' : 'Open',
-  'remove' => vm_lang() === 'am' ? 'አስወግድ' : 'Remove',
-  'exportTitle' => vm_lang() === 'am' ? 'VisaMenged - የተቀመጡ መረጃዎች' : 'VisaMenged - Saved list',
-  'tagline' => vm_t('tagline'),
-  'generated' => vm_lang() === 'am' ? 'ተዘጋጀ' : 'Generated',
-], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?>;
-</script>
-<aside class="basket-panel" data-basket-panel aria-label="<?= vm_h(vm_t('saved_resources')) ?>">
-  <div class="basket-head">
-    <h2><?= vm_h(vm_t('saved_resources')) ?></h2>
-    <button type="button" data-basket-close aria-label="<?= vm_h(vm_t('close')) ?>">x</button>
-  </div>
-  <div data-basket-items class="basket-items"></div>
-  <div class="basket-actions">
-    <button type="button" class="button secondary" data-basket-print><?= vm_h(vm_t('print')) ?></button>
-    <button type="button" class="button secondary" data-basket-download><?= vm_h(vm_t('download_list')) ?></button>
-    <button type="button" class="button ghost" data-basket-clear><?= vm_h(vm_t('clear')) ?></button>
-  </div>
-</aside>
 <main>

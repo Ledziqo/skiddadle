@@ -409,7 +409,7 @@
     "types": [
       {
         "type": "Tourist / visitor",
-        "fee": "General Japan visa fee: JPY 3,000 single-entry / JPY 6,000 double or multiple; paid only if issued",
+      "fee": "General Japan visa fee: JPY 3,000 single-entry / JPY 6,000 double or multiple; collected only if issued",
         "what_to_prepare": "Passport valid 6+ months with blank pages; completed visa form; recent passport photo; residence proof in Ethiopia if requested"
       },
       {
@@ -424,7 +424,7 @@
       },
       {
         "type": "Student",
-        "fee": "JPY 3,000 single-entry visa after Certificate of Eligibility; fee paid if issued",
+      "fee": "JPY 3,000 single-entry visa after Certificate of Eligibility; fee collected if issued",
         "what_to_prepare": "Passport valid 6+ months; admission/acceptance letter or CAS/I-20/LOA/COE depending on country; proof of tuition payment/scholarship; financial evidence for tuition + living costs"
       }
     ]

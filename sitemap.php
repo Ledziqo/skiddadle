@@ -12,7 +12,7 @@ $lastMod = gmdate('Y-m-d');
   <url><loc><?= $base ?>/forms.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc><?= $base ?>/checklist-generator.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc><?= $base ?>/schengen.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc><?= $base ?>/pricing.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc><?= $base ?>/free-tools.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc><?= $base ?>/student-visa.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc><?= $base ?>/business-visa.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc><?= $base ?>/medical-visa.php</loc><lastmod><?= $lastMod ?></lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>

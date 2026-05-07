@@ -30,7 +30,7 @@ foreach ($countriesAlpha as $c) {
 
 vm_page_start('Official Visa Forms for Ethiopians — PDFs, Portals & Checklists', 'Find official visa forms, online portals and requirement pages for Ethiopian applicants. Organized by country and visa type. Student, business, tourist & medical visa forms.');
 ?>
-<section class="page-hero">
+<section class="page-hero generator-hero">
   <span class="eyebrow">Forms Brain</span>
   <h1>Find the right official route, not just a random form.</h1>
   <p>Search by country and visa type. VisaMenged helps separate portals, PDFs and requirement pages so applicants know what to open first.</p>

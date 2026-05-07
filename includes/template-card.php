@@ -1,6 +1,5 @@
 <?php
 $template = $template ?? [];
-$basketPayload = ['type' => 'Template', 'title' => (string)($template['title'] ?? ''), 'meta' => (string)($template['category'] ?? ''), 'url' => vm_url('letter-generator.php?template=' . (string)($template['id'] ?? ''))];
 ?>
 <article class="card template-card">
   <div class="card-top">
@@ -12,6 +11,5 @@ $basketPayload = ['type' => 'Template', 'title' => (string)($template['title'] ?
   <p class="muted">Used for: <?= vm_h(implode(', ', (array)($template['usedFor'] ?? []))) ?></p>
   <div class="actions">
     <a class="button" href="<?= vm_url('letter-generator.php?template=' . vm_h($template['id'] ?? '')) ?>">Start draft</a>
-    <button class="button secondary" type="button" data-add-basket='<?= vm_h(json_encode($basketPayload, JSON_UNESCAPED_SLASHES)) ?>'>Add template</button>
   </div>
 </article>

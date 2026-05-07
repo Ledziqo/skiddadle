@@ -11,7 +11,7 @@
       <a href="<?= vm_url('index.php') ?>">Home</a>
       <a href="<?= vm_url('forms.php') ?>">Official resources</a>
       <a href="<?= vm_url('checklist-generator.php') ?>">Checklist generator</a>
-      <a href="<?= vm_url('pricing.php') ?>">Services</a>
+      <a href="<?= vm_url('free-tools.php') ?>">Free tools</a>
     </div>
     <div class="footer-col">
       <strong>Support</strong>
@@ -29,7 +29,11 @@
 </footer>
 <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">↑</button>
 <a class="telegram-float" href="<?= vm_h((string)vm_config_path('contact.telegram_url', 'https://t.me/Aesliex')) ?>" target="_blank" rel="noopener">Ask on Telegram</a>
-<script src="<?= vm_url('assets/js/app.js') ?>"></script>
-<script src="<?= vm_url('assets/js/basket.js') ?>"></script>
+<?php
+$vm_js_path = __DIR__ . '/../assets/js/app.js';
+clearstatcache(true, $vm_js_path);
+$vm_js_version = is_file($vm_js_path) ? (string)(filemtime($vm_js_path) . '-' . filesize($vm_js_path)) : '1';
+?>
+<script src="<?= vm_url('assets/js/app.js?v=' . $vm_js_version) ?>"></script>
 </body>
 </html>

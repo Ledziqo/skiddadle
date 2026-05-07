@@ -7,7 +7,7 @@ usort($countriesAlpha, fn(array $a, array $b): int => strcasecmp((string)($a['na
 $popularCountries = $countriesAlpha;
 vm_page_start('Country Guides — Free Visa Resources for Ethiopian Applicants', 'Browse free country guides for Ethiopian passport holders. Official forms, fees, requirements and application steps for 25+ countries.');
 ?>
-<section class="page-hero">
+<section class="page-hero generator-hero">
   <span class="eyebrow"><?= vm_h(vm_t('country_guides_nav')) ?></span>
   <h1>Every country guide. One clear list.</h1>
   <p>Pick your destination, open official forms, follow the steps, and know exactly what to prepare before you apply.</p>

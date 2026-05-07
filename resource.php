@@ -67,7 +67,7 @@ if (!$requirements) {
         'Use the official portal, PDF, checklist or requirement page linked on this guide.',
         'Prepare evidence that matches the stated purpose: travel, study, work, business, medical, transit or general visa support.',
         'Check whether an appointment, biometrics, interview, visa centre visit or online upload is required.',
-        'Verify the current fee, processing time, address and working hours before paying or attending.',
+        'Verify the current fee, processing time, address and working hours before attending.',
     ];
 }
 if (!$documents) {
@@ -124,7 +124,7 @@ if (!$validity) {
 }
 if ($visaFee === '') {
     $primaryFeeRow = $feeRows[0] ?? null;
-    $visaFee = $primaryFeeRow ? ((string)$primaryFeeRow['type'] . ': ' . vm_fee_display((string)$primaryFeeRow['fee'])) : (string)($feeGuide['source_note'] ?? 'Check the official fee page before paying. Fees can change by route, duration, exchange rate and service centre.');
+    $visaFee = $primaryFeeRow ? ((string)$primaryFeeRow['type'] . ': ' . vm_fee_display((string)$primaryFeeRow['fee'])) : (string)($feeGuide['source_note'] ?? 'Check the official fee page. Fees can change by route, duration, exchange rate and service centre.');
 }
 if ($processing === '') {
     $processing = 'Check the official source and appointment availability. Processing time and appointment availability are separate.';
@@ -173,9 +173,9 @@ vm_page_start($guideTitle . ' Guide');
         <h2>Prices and fee checks</h2>
         <?php if ($feeRows): ?>
           <ul><?php foreach ($feeRows as $row): ?><li><strong><?= vm_h($row['type']) ?>:</strong> <?= vm_h(vm_fee_display((string)$row['fee'])) ?></li><?php endforeach; ?></ul>
-          <p class="fee-note">Birr amounts are approximate planning conversions; pay using the official currency and fee page.</p>
+          <p class="fee-note">Birr amounts are approximate planning conversions; verify the official currency and fee page.</p>
         <?php else: ?>
-          <p>Use the official fee page or official source before paying. Do not rely on old screenshots, agent quotes or copied fee tables.</p>
+          <p>Use the official fee page or official source. Do not rely on old screenshots, agent quotes or copied fee tables.</p>
         <?php endif; ?>
         <?php if ($feeSourceUrl !== ''): ?><div class="actions" style="margin-top:12px"><a class="button ghost" href="<?= vm_h($feeSourceUrl) ?>" target="_blank" rel="noopener">Open official fee page</a></div><?php endif; ?>
       </section>
@@ -272,9 +272,9 @@ vm_page_start($guideTitle . ' Guide');
         <?php endif; ?>
       </section>
       <section class="resource-guide-card">
-        <h2>Need help?</h2>
-        <p>Use paid help only for the part of the file that is weak: invitation, sponsor proof, refusal history, or document organization.</p>
-        <a class="button secondary" href="<?= vm_url('pricing.php') ?>">Paid help</a>
+        <h2>Free tools</h2>
+        <p>Use the free tools for the part of the file that is weak: invitation, sponsor proof, refusal history, or document organization.</p>
+        <a class="button secondary" href="<?= vm_url('free-tools.php') ?>">Open free tools</a>
       </section>
     </aside>
   </div>

@@ -475,14 +475,14 @@ function vm_country_process_steps(string $slug, array $resources = []): array
             ['title' => 'Add receiving-side evidence', 'body' => 'Business, medical and student files should include invitation, treatment/admission or organization proof from India when relevant.'],
         ],
         'united-arab-emirates' => [
-            ['title' => 'Confirm the approved UAE channel', 'body' => 'UAE applications can involve airline, sponsor, travel agency, government or embassy-related channels. Verify the channel before paying anyone.'],
+            ['title' => 'Confirm the approved UAE channel', 'body' => 'UAE applications can involve airline, sponsor, travel agency, government or embassy-related channels. Verify the channel before sharing documents or details.'],
             ['title' => 'Prepare sponsor or host details if required', 'body' => 'If a host, company or hotel is involved, keep their contact, address, booking and cost responsibility consistent.'],
             ['title' => 'Watch for scam risk', 'body' => 'Do not trust unofficial approval promises. Keep receipts, application reference numbers and official tracking links.'],
         ],
         'saudi-arabia' => [
             ['title' => 'Start with the official Saudi portal route', 'body' => 'Saudi applications are often portal-first. Choose the correct purpose such as tourism, work, visit, business or religious travel before preparing documents.'],
             ['title' => 'Prepare invitation or sponsor details', 'body' => 'For visit, business or work categories, keep invitation, sponsor, employer or host details consistent with the application.'],
-            ['title' => 'Verify appointment, biometrics or service-center steps', 'body' => 'Use the official portal or linked center instructions for submission, payment, biometrics and tracking.'],
+            ['title' => 'Verify appointment, biometrics or service-center steps', 'body' => 'Use the official portal or linked center instructions for submission, official fees, biometrics and tracking.'],
         ],
         'turkey' => [
             ['title' => 'Check e-Visa eligibility first', 'body' => 'Some applicants may use e-Visa routes while others need sticker visa pre-application. Start by confirming the correct official path.'],

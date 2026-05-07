@@ -28,7 +28,7 @@
       if(!selectedVisa)return true;
       if(cardVisa===selectedVisa)return true;
       const routes={
-        'tourist visa':['tourist','visitor','visit','transit'],
+        'tourist visa':['tourist','visitor','visit'],
         'student visa':['student','study'],
         'work visa':['work','employment','worker'],
         'business visa':['business'],
@@ -74,7 +74,7 @@
 
   document.querySelectorAll('[data-card-href]').forEach(card=>{
     card.addEventListener('click',e=>{
-      if(e.target.closest('a,button,input,select,textarea'))return;
+      if(e.target.closest('a,button,input,select,textarea,details,summary'))return;
       window.location.href=card.dataset.cardHref;
     });
   });
@@ -85,7 +85,7 @@
     const cards=[...document.querySelectorAll('[data-country-resource-grid] [data-resource-card]')];
     const count=document.querySelector('[data-country-resource-count]');
     const routeTerms={
-      tourist:['tourist','visitor','visit','transit','eta','trv','short-stay'],
+      tourist:['tourist','visitor','visit','eta','trv','short-stay'],
       student:['student','study','school','education','admission'],
       work:['work','employment','employee','worker','skilled','permit'],
       business:['business','commerce','meeting','conference','professional'],
@@ -195,25 +195,4 @@
     input.addEventListener('change', updateSummary);
   });
 
-  const paddleConfig = window.VM_PADDLE || null;
-  if (paddleConfig && window.Paddle && paddleConfig.token) {
-    if ((paddleConfig.env || '').toLowerCase() === 'sandbox' && Paddle.Environment) {
-      Paddle.Environment.set('sandbox');
-    }
-    Paddle.Initialize({ token: paddleConfig.token });
-    document.querySelectorAll('[data-paddle-checkout]').forEach(el => {
-      el.addEventListener('click', (event) => {
-        const priceId = el.getAttribute('data-paddle-price-id');
-        if (!priceId) { return; }
-        event.preventDefault();
-        Paddle.Checkout.open({
-          items: [{ priceId, quantity: 1 }],
-          customData: {
-            product: el.getAttribute('data-paddle-product') || 'service',
-            source_page: window.location.pathname
-          }
-        });
-      });
-    });
-  }
 })();

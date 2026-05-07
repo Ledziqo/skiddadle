@@ -114,10 +114,8 @@ function vm_h(mixed $value): string { return htmlspecialchars((string)$value, EN
 
 function vm_lang(): string
 {
-    if (isset($_GET['lang']) && in_array($_GET['lang'], ['en', 'am'], true)) {
-        $_SESSION['lang'] = $_GET['lang'];
-    }
-    return (string)($_SESSION['lang'] ?? 'en');
+    $_SESSION['lang'] = 'en';
+    return 'en';
 }
 
 function vm_t(string $key): string
