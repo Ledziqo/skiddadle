@@ -31,18 +31,5 @@
 <a class="telegram-float" href="<?= vm_h((string)vm_config_path('contact.telegram_url', 'https://t.me/Aesliex')) ?>" target="_blank" rel="noopener">Ask on Telegram</a>
 <script src="<?= vm_url('assets/js/app.js') ?>"></script>
 <script src="<?= vm_url('assets/js/basket.js') ?>"></script>
-<?php
-$paddleToken = (string)(getenv('PADDLE_CLIENT_TOKEN') ?: ($_ENV['PADDLE_CLIENT_TOKEN'] ?? $_SERVER['PADDLE_CLIENT_TOKEN'] ?? ''));
-$paddleEnv = (string)(getenv('PADDLE_ENV') ?: ($_ENV['PADDLE_ENV'] ?? $_SERVER['PADDLE_ENV'] ?? 'sandbox'));
-?>
-<?php if ($paddleToken !== ''): ?>
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-<script>
-window.VM_PADDLE = {
-  token: <?= json_encode($paddleToken, JSON_UNESCAPED_SLASHES) ?>,
-  env: <?= json_encode($paddleEnv, JSON_UNESCAPED_SLASHES) ?>
-};
-</script>
-<?php endif; ?>
 </body>
 </html>

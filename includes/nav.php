@@ -9,7 +9,7 @@ $vm_nav_items = [
   ['href' => 'forms.php', 'label' => vm_t('official_forms_nav'), 'active' => $vm_current_page === 'forms.php'],
   ['href' => 'checklist-generator.php', 'label' => vm_t('free_checklist_nav'), 'active' => $vm_current_page === 'checklist-generator.php'],
   ['href' => 'schengen.php', 'label' => vm_t('schengen_nav'), 'active' => $vm_current_page === 'schengen.php'],
-  ['href' => 'pricing.php', 'label' => vm_t('paid_help_nav'), 'active' => in_array($vm_current_page, ['pricing.php', 'review-request.php', 'letter-generator.php', 'pack.php', 'previous-refusal-helper.php', 'templates.php', 'contact.php'], true), 'class' => 'paid-help-link'],
+  ['href' => 'free-tools.php', 'label' => 'Free tools', 'active' => in_array($vm_current_page, ['free-tools.php', 'review-request.php', 'letter-generator.php', 'pack.php', 'previous-refusal-helper.php', 'templates.php', 'contact.php'], true), 'class' => 'paid-help-link'],
 ];
 ?>
 <nav class="site-nav" data-site-nav>

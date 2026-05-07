@@ -10,11 +10,11 @@ vm_page_start('VisaMenged — Free Visa Guides & Document Help for Ethiopians', 
   <div>
     <span class="eyebrow">For Ethiopian visa applicants</span>
     <h1>Get your visa file right — without the guesswork.</h1>
-    <p>Free country guides with official forms and requirements. Optional document support when your file needs polishing. No approval promises, just clear steps.</p>
+    <p>Free country guides with official forms and requirements. Free document tools when your file needs polishing. No approval promises, just clear steps.</p>
   </div>
   <div class="simple-hero-actions">
     <a class="button" href="<?= vm_url('guides.php') ?>">Browse Country Guides</a>
-    <a class="button ghost" href="<?= vm_url('pricing.php') ?>">Get Document Support</a>
+    <a class="button ghost" href="<?= vm_url('free-tools.php') ?>">Open Free Tools</a>
   </div>
   <div class="hero-flag-cloud" aria-hidden="true">
     <i class="route-line route-one"></i>
@@ -54,7 +54,7 @@ vm_page_start('VisaMenged — Free Visa Guides & Document Help for Ethiopians', 
     <article>
       <span>03</span>
       <h3>Fix what is weak</h3>
-      <p>Upgrade only when you want document polishing, letters, sponsor-proof cleanup, or refusal recovery. Get a clear fix plan with draft wording and evidence order.</p>
+      <p>Use the free tools to polish documents, draft letters, clean up sponsor proof, or plan refusal recovery. Get a clear fix plan with draft wording and evidence order.</p>
     </article>
   </div>
 </section>
@@ -97,78 +97,12 @@ vm_page_start('VisaMenged — Free Visa Guides & Document Help for Ethiopians', 
   </div>
 </section>
 
-<section class="paid-services" id="document-support">
-  <div class="paid-services-head">
-    <div><span class="eyebrow">Smart services</span><h2>The only 4 upgrades you need before submission.</h2><p>Fast automated delivery, clear pricing, and output designed to reduce avoidable refusal risk.</p></div>
-  </div>
-  <div class="paid-services-grid">
-    <a href="<?= vm_url('review-request.php') ?>" class="service-card" data-paddle-checkout data-paddle-price-id="pri_01kqzbs9118mc38j9szyzvzddf" data-paddle-product="quick-checklist-cleanup">
-      <div class="service-card-top">
-        <span class="service-badge">Easy starter</span>
-        <strong class="service-price">499 birr</strong>
-      </div>
-      <h3>Quick Checklist Cleanup</h3>
-      <p>Instantly convert official requirements into a clean, personalized action checklist you can follow line by line.</p>
-      <ul>
-        <li>Personal checklist</li>
-        <li>Missing-item warnings</li>
-        <li>Submission order</li>
-      </ul>
-      <span class="service-cta">Get my checklist now -></span>
-    </a>
-    <a href="<?= vm_url('letter-generator.php') ?>" class="service-card" data-paddle-checkout data-paddle-price-id="pri_01kqzbve8tnkvy354va6qdav21" data-paddle-product="letter-pack">
-      <div class="service-card-top">
-        <span class="service-badge secondary">Same-day drafts</span>
-        <strong class="service-price">from 1,500 birr</strong>
-      </div>
-      <h3>Letter Pack</h3>
-      <p>Generate strong first-draft letters for cover, sponsor, employer, invitation, and refusal response in one workflow.</p>
-      <ul>
-        <li>Tailored to your visa type</li>
-        <li>Funding & relationship proof</li>
-        <li>One revision included</li>
-      </ul>
-      <span class="service-cta">Generate my letter pack -></span>
-    </a>
-    <a href="<?= vm_url('interview-readiness.php') ?>" class="service-card" data-paddle-checkout data-paddle-price-id="pri_01kqzbtezwf7ppqf87zy470a06" data-paddle-product="interview-readiness-pack">
-      <div class="service-card-top">
-        <span class="service-badge">High demand</span>
-        <strong class="service-price">from 1,200 birr</strong>
-      </div>
-      <h3>Interview Readiness Pack</h3>
-      <p>Get country-specific interview questions, recommended answer angles, and confidence-building practice prompts.</p>
-      <ul>
-        <li>Country and visa-type question bank</li>
-        <li>Strong-answer structure guide</li>
-        <li>Red-flag answer warnings</li>
-      </ul>
-      <span class="service-cta">Prepare me for interview -></span>
-    </a>
-    <a href="<?= vm_url('review-request.php') ?>" class="service-card featured" data-paddle-checkout data-paddle-price-id="pri_01kqzbx5ra4hnxe0dcpn570djt" data-paddle-product="complete-file-organization">
-      <div class="service-card-top">
-        <span class="service-badge">Best value</span>
-        <strong class="service-price">from 3,000 birr</strong>
-      </div>
-      <h3>Complete File Organization</h3>
-      <p>Get a full-file cleanup system that aligns purpose, timing, money, invitation, and return ties into one consistent story.</p>
-      <ul>
-      <li>Full document audit + rewrite</li>
-        <li>Consistency check across all papers</li>
-        <li>Final checklist + submission order</li>
-      </ul>
-      <span class="service-cta">Organize my full file -></span>
-  </a>
-  </div>
-  <div class="paid-services-foot">
-    <p>These are the only paid services on VisaMenged. <a href="<?= vm_url('pricing.php') ?>">View full details -></a></p>
-  </div>
-</section>
-
 <section class="final-cta">
   <div>
     <h2>Ready to start?</h2>
-    <p>Pick your destination and see exactly what official forms and steps you need.</p>
+    <p>Pick your destination and see exactly what official forms and steps you need. Or open the free tools for a guided next step.</p>
     <a class="button" href="<?= vm_url('guides.php') ?>">Browse Country Guides</a>
+    <a class="button ghost" href="<?= vm_url('free-tools.php') ?>">Open Free Tools</a>
   </div>
 </section>
 

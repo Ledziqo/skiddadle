@@ -51,13 +51,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $payload['smart_precheck'] = $brain;
             $saved = vm_save_submission('review-request', $payload);
         } catch (Throwable $e) {
-            $error = 'The file was uploaded, but the smart review could not finish. Please try again with fewer files or smaller PDFs.';
+            $error = 'The file was uploaded, but the review could not finish. Please try again with fewer files or smaller PDFs.';
         }
     }
 }
-vm_page_start('Visa Document Review for Ethiopians — File Check', 'Submit your visa file for professional review. Missing documents, weak points, refusal risks and fix recommendations for Ethiopian applicants.');
+vm_page_start('Visa Document Review for Ethiopians', 'Free visa file review for Ethiopian applicants. Missing documents, weak points, refusal risks and fix recommendations.');
 ?>
-<section class="page-hero pricing-hero"><span class="eyebrow">Smart file pre-check</span><h1>Let VisaMenged find the weak points before you submit.</h1><p>Answer a few risk questions and upload copies. The smart pre-check flags likely gaps instantly and gives a structured fix plan for the full file.</p><div class="hero-actions"><a class="button" href="#review-form">Start smart pre-check</a><a class="button secondary" href="<?= vm_url('pack.php?id=quick-file-audit') ?>">See quick audit</a></div></section>
+<section class="page-hero pricing-hero"><span class="eyebrow">Free file pre-check</span><h1>Let VisaMenged find the weak points before you submit.</h1><p>Answer a few risk questions and upload copies. The pre-check flags likely gaps instantly and gives a structured fix plan for the full file.</p><div class="hero-actions"><a class="button" href="#review-form">Start free pre-check</a><a class="button secondary" href="<?= vm_url('free-tools.php') ?>">See free tools</a></div></section>
 <section class="review-value">
   <article><h3>What we check</h3><p>Official checklist match, purpose evidence, funding story, sponsor/invitation proof, return ties and refusal-risk signals.</p></article>
   <article><h3>What you receive</h3><p>A practical fix list: missing documents, unclear statements, consistency problems and the next steps to clean the file.</p></article>
@@ -68,9 +68,9 @@ vm_page_start('Visa Document Review for Ethiopians — File Check', 'Submit your
 <section class="notice success">
   <strong>Request saved.</strong>
   <p>Your review request ID is <strong><?= vm_h($saved) ?></strong>.</p>
-  <p>Your automated file result is ready now. You can continue with the guided cleanup steps immediately.</p>
+  <p>Your result is ready now. You can continue with the guided cleanup steps immediately.</p>
   <div class="hero-actions" style="margin-top:14px">
-    <a class="button" href="<?= vm_url('pricing.php') ?>">View other services</a>
+    <a class="button" href="<?= vm_url('free-tools.php') ?>">View other free tools</a>
     <a class="button secondary" href="<?= vm_url('index.php') ?>">Back to home</a>
   </div>
 </section>
@@ -91,7 +91,7 @@ vm_page_start('Visa Document Review for Ethiopians — File Check', 'Submit your
     <?php if (!empty($brain['submission_order'])): ?><article><h3>Recommended submission order</h3><?= vm_list_html($brain['submission_order']) ?></article><?php endif; ?>
   </div>
   <div class="notice"><strong>No approval prediction:</strong> this score only checks preparation quality. Official visa decisions belong to the embassy, government, VFS/TLS or visa center.</div>
-  <div class="actions"><a class="button" href="<?= vm_url('pack.php?id=quick-file-audit') ?>">Open full smart audit</a><button class="button secondary" type="button" data-print-target="brain">Print pre-check</button></div>
+  <div class="actions"><a class="button" href="<?= vm_url('free-tools.php') ?>">Open free tools</a><button class="button secondary" type="button" data-print-target="brain">Print pre-check</button></div>
 </section>
 <?php endif; ?>
 <?php else: ?>
@@ -118,8 +118,8 @@ vm_page_start('Visa Document Review for Ethiopians — File Check', 'Submit your
     <label class="drop-upload-zone">Previous refusal letter <span>Drag files here or click to choose</span><input type="file" name="documents_refusal[]" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><small data-file-summary>No files selected</small></label>
     <label class="drop-upload-zone">Other documents <span>Drag files here or click to choose</span><input type="file" name="documents_other[]" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"><small data-file-summary>No files selected</small></label>
   </div>
-  <p class="muted">The instant pre-check uses your answers and upload summary. For best results, upload complete documents so the smart audit can check consistency deeply.</p>
-  <button class="button" type="submit">Run smart pre-check</button>
+  <p class="muted">The pre-check uses your answers and upload summary. For best results, upload complete documents so the audit can check consistency deeply.</p>
+  <button class="button" type="submit">Run free pre-check</button>
 </form>
 <?php endif; ?>
 <?php require __DIR__ . '/includes/disclaimer.php'; vm_page_end(); ?>

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 vm_page_start('Free Visa Letter Generator for Ethiopians', 'Generate free visa letter drafts for Ethiopian applicants. Cover letters, sponsor letters, invitation letters and employer letters.');
 ?>
-<section class="page-hero"><span class="eyebrow">Offline smart draft engine</span><h1>Generate a letter draft that does not sound copied.</h1><p>VisaMenged rotates safe wording, adapts to your answers and gives rewrite points so your final letter stays personal to your evidence.</p></section>
+<section class="page-hero"><span class="eyebrow">Free draft engine</span><h1>Generate a letter draft that does not sound copied.</h1><p>VisaMenged rotates safe wording, adapts to your answers and gives rewrite points so your final letter stays personal to your evidence.</p></section>
 <section class="two-col">
   <form class="card form-card" method="post">
     <?= vm_csrf_field() ?>
@@ -23,9 +23,9 @@ vm_page_start('Free Visa Letter Generator for Ethiopians', 'Generate free visa l
     <label>Funding <input name="funding" placeholder="self-funded, sponsored by..."></label>
     <label>Purpose <textarea name="purpose" rows="4" required></textarea></label>
     <label>Ties / return evidence <textarea name="ties" rows="3"></textarea></label>
-    <button class="button" type="submit">Generate unique starter draft</button>
+    <button class="button" type="submit">Generate starter draft</button>
   </form>
-  <aside class="side-panel smart-ai-panel"><h2>Why drafts vary</h2><ul><li>Different openings and closings.</li><li>Country, purpose, funding and ties change the wording.</li><li>Risk notes appear only when your answers need them.</li><li>Every final letter should be edited with your real evidence.</li></ul><a class="button secondary" href="<?= vm_url('contact.php?topic=custom-letter') ?>">Request polished letter</a></aside>
+  <aside class="side-panel smart-ai-panel"><h2>Why drafts vary</h2><ul><li>Different openings and closings.</li><li>Country, purpose, funding and ties change the wording.</li><li>Risk notes appear only when your answers need them.</li><li>Every final letter should be edited with your real evidence.</li></ul><a class="button secondary" href="<?= vm_url('free-tools.php') ?>">Back to free tools</a></aside>
 </section>
 <?php if ($draft):
   $smartDraft = vm_generate_letter_draft($draft);
@@ -41,7 +41,7 @@ vm_page_start('Free Visa Letter Generator for Ethiopians', 'Generate free visa l
     <article><h3>Make it yours before submitting</h3><?= vm_list_html($smartDraft['rewrite_tips']) ?></article>
     <?php if ($smartDraft['risk_notes']): ?><article class="notice"><h3>Risk notes</h3><?= vm_list_html($smartDraft['risk_notes']) ?></article><?php endif; ?>
   </div>
-  <div class="actions"><a class="button" href="<?= vm_url('review-request.php') ?>">Request review</a><button class="button secondary" type="button" data-print-target="letter">Print draft</button><button class="button ghost" type="button" data-download-letter>Download text</button></div>
+  <div class="actions"><a class="button" href="<?= vm_url('free-tools.php') ?>">Open free tools</a><button class="button secondary" type="button" data-print-target="letter">Print draft</button><button class="button ghost" type="button" data-download-letter>Download text</button></div>
 </section>
 <?php endif; ?>
 <?php require __DIR__ . '/includes/disclaimer.php'; vm_page_end(); ?>
